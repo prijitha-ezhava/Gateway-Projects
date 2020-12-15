@@ -1,0 +1,81 @@
+﻿@model SourceControlFinalAssignment.Models.tblUserDetails
+@{
+    ViewBag.Title = "Dashboard";
+    if (@Session["Username"] == null)
+    {
+        Response.Redirect("~/Home/Login");
+    }
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+    .main {
+        margin-top: 30px;
+        padding: 10px 15px;
+    }
+
+    .page-container {
+        height: 100%;
+    }
+    .table {
+        width:80%;
+        border: none;
+        border-top: none;
+        color: #000100;
+        font-size: 20px;
+        background-color: #DCDCDC;
+    }
+
+    .jumbotron {
+        background-color: #DCDCDC;
+    }
+    .img_line{
+        width:20%;
+        float:right;
+    }
+   
+</style>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <a href="#" class="navbar-brand" style="color:#FFF">USER DETAILS</a>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li> @Html.ActionLink(" SIGNOUT", "Logout", "Home", new { @class = "glyphicon glyphicon-log-in position-left", @style = "font-size: 18px; color : #FFF;" })</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container page-container mx-auto">
+    <h2 class="text-center">Profile</h2>
+    <div class="page-wrapper">
+        <div class="main custom__main">
+            <div class="mx-auto">
+                <h1 class="bg-danger" align="center">Welcome @Session["Username"]</h1>
+            </div>
+        </div>
+
+        <div class="jumbotron info">
+
+            <table class="table table-borderless">
+                @if (Session["UserID"] != null)
+                {
+                    <img class="img_line" src="@Url.Content(@Model.uProfileImg)" />
+                    <tbody class="table_body">
+
+                        <tr scope="row"><th>Username</th><td>@Session["Username"].ToString()</td></tr>
+                        <tr scope="row"><th>Email ID</th><td>@Session["EmailID"].ToString()</td></tr>
+                        <tr scope="row"><th>Age</th><td>@Session["Age"].ToString()</td></tr>
+                        <tr scope="row"><th>Address</th><td>@Session["Address"].ToString()</td></tr>
+                        <tr scope="row"><th>Phone</th><td>@Session["Phone"].ToString()</td></tr>
+                    </tbody>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

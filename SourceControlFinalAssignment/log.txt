@@ -1,0 +1,4 @@
+DEBUG 2020-12-15 16:02:31,862   999ms HomeController         Login              - Debug message
+WARN  2020-12-15 16:02:32,465  1601ms HomeController         Login              - Warn message
+ERROR 2020-12-15 16:02:32,467  1603ms HomeController         Login              - Error message
+FATAL 2020-12-15 16:02:32,470  1606ms HomeController         Login              - Fatal message

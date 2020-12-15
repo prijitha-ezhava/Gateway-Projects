@@ -1,0 +1,89 @@
+﻿@model SourceControlFinalAssignment.Models.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+    var msg = TempData["msg"] as string;
+}
+
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .form-horizontal{
+            justify-content:center;
+            margin-left:auto;
+            margin-right:auto;
+            width:80%
+        }
+        .jumbotron {
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 70%;
+        }
+        .btn-group {
+            width:100%;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-group-item{
+            width:100%;
+           margin-left:27%;
+        }
+    </style>
+</head>
+
+@if (!String.IsNullOrEmpty(msg))
+{
+    <div class="alert alert-success alert-dismissable">
+        <button type="button" data-dismiss="alert" class="close">&times;</button>
+        <p>@msg</p>
+    </div>
+}
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="container">
+    <h2 class="text-center">User Login</h2>
+    <div class="jumbotron">
+        <div class="form-horizontal">
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.uEmail, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.uEmail, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.uEmail, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.uPassword, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.uPassword, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.uPassword, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group btn-group">
+                <div class="col-md-offset-2 col-md-10 btn-group-item">
+                    <input type="submit" value="LOGIN" class="btn btn-success" />
+                    <a href="@Url.Action("Users","UserReg")" class="btn btn-danger">REGISTER</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
