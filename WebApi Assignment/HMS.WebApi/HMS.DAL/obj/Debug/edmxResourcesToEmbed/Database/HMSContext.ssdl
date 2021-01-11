@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_HMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_Bookings">
+    <Key>
+      <PropertyRef Name="bID" />
+    </Key>
+    <Property Name="bID" Type="int" Nullable="false" />
+    <Property Name="bDate" Type="datetime" Nullable="false" />
+    <Property Name="bStatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="rID" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Hotels">
+    <Key>
+      <PropertyRef Name="hID" />
+    </Key>
+    <Property Name="hID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="hAddress" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="hCity" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="hPincode" Type="int" Nullable="false" />
+    <Property Name="hContactNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="hContactPerson" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="hWebsite" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="hFacebook" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="hTwitter" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="hIsActive" Type="bit" Nullable="false" />
+    <Property Name="hCreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="hCreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="hUpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="hUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_Rooms">
+    <Key>
+      <PropertyRef Name="rID" />
+    </Key>
+    <Property Name="rID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="rCategory" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="rPrice" Type="float" Nullable="false" />
+    <Property Name="rIsActive" Type="binary" MaxLength="1" Nullable="false" />
+    <Property Name="rCreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="rCreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="rUpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="rUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="hID" Type="int" />
+  </EntityType>
+  <Association Name="FK__tbl_Booking__rID__07F6335A">
+    <End Role="tbl_Rooms" Type="Self.tbl_Rooms" Multiplicity="0..1" />
+    <End Role="tbl_Bookings" Type="Self.tbl_Bookings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Rooms">
+        <PropertyRef Name="rID" />
+      </Principal>
+      <Dependent Role="tbl_Bookings">
+        <PropertyRef Name="rID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Rooms__hID__03317E3D">
+    <End Role="tbl_Hotels" Type="Self.tbl_Hotels" Multiplicity="0..1" />
+    <End Role="tbl_Rooms" Type="Self.tbl_Rooms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Hotels">
+        <PropertyRef Name="hID" />
+      </Principal>
+      <Dependent Role="tbl_Rooms">
+        <PropertyRef Name="hID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_HMSModelStoreContainer">
+    <EntitySet Name="tbl_Bookings" EntityType="Self.tbl_Bookings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Hotels" EntityType="Self.tbl_Hotels" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Rooms" EntityType="Self.tbl_Rooms" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__tbl_Booking__rID__07F6335A" Association="Self.FK__tbl_Booking__rID__07F6335A">
+      <End Role="tbl_Rooms" EntitySet="tbl_Rooms" />
+      <End Role="tbl_Bookings" EntitySet="tbl_Bookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Rooms__hID__03317E3D" Association="Self.FK__tbl_Rooms__hID__03317E3D">
+      <End Role="tbl_Hotels" EntitySet="tbl_Hotels" />
+      <End Role="tbl_Rooms" EntitySet="tbl_Rooms" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

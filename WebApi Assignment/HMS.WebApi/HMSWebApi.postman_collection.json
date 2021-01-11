@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "52275a06-2a03-42a5-861c-0f28130ac5ff",
+		"name": "HMSWebApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44392/api/hotel/",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hID\" : \"5\",\r\n    \"hName\": \"DineInKochi\",\r\n    \"hAddress\": \"Gandhinagar Second Street\",\r\n    \"hCity\": \"Bengaluru\",\r\n    \"hPincode\" : 741852,\r\n    \"hContactNumber\": 7418529630,\r\n    \"hContactPerson\": \"ABC\",\r\n    \"hWebsite\": \"www.DineInKochi.com\",\r\n    \"hFacebook\": \"www.facebook.com/DineInKochi\",\r\n    \"hTwitter\": \"www.twitter.com/DineInKochi\",\r\n    \"hIsActive\": true,\r\n    \"hCreatedDate\": \"2020-01-01T00:00:00\",\r\n    \"hCreatedBy\": \"XYZ\",\r\n    \"hUpdatedDate\": \"2021-01-01T00:00:00\",\r\n    \"hUpdatedBy\": \"XYZ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44392/api/hotel/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44392",
+					"path": [
+						"api",
+						"hotel",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44392/api/hotel/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hID\" : \"5\",\r\n    \"hName\": \"DineInKochi\",\r\n    \"hAddress\": \"Gandhinagar Second Street\",\r\n    \"hCity\": \"Bengaluru\",\r\n    \"hPincode\" : 741852,\r\n    \"hContactNumber\": 7418529630,\r\n    \"hContactPerson\": \"ABC\",\r\n    \"hWebsite\": \"www.DineInKochi.com\",\r\n    \"hFacebook\": \"www.facebook.com/DineInKochi\",\r\n    \"hTwitter\": \"www.twitter.com/DineInKochi\",\r\n    \"hIsActive\": true,\r\n    \"hCreatedDate\": \"2020-01-01T00:00:00\",\r\n    \"hCreatedBy\": \"XYZ\",\r\n    \"hUpdatedDate\": \"2021-01-01T00:00:00\",\r\n    \"hUpdatedBy\": \"XYZ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44392/api/hotel/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44392",
+					"path": [
+						"api",
+						"hotel",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44392/api/hotel/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bID\" : 1,\r\n    \"bStatus\" : \"Definitive\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44392/api/hotel/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44392",
+					"path": [
+						"api",
+						"hotel",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44392/api/hotel/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hName\": \"Sky\",\r\n    \"hAddress\": \"Narol\",\r\n    \"hCity\": \"Ahmedabad\",\r\n    \"hPincode\": 382415,\r\n    \"hContactNumber\": \"7418529630\",\r\n    \"hContactPerson\": \"Alex\",\r\n    \"hWebsite\": \"www.Sky.com\",\r\n    \"hFacebook\": \"www.facebook.com/Sky\",\r\n    \"hTwitter\": \"www.twitter.com/Sky\",\r\n    \"hIsActive\": true,\r\n    \"hCreatedDate\": \"1998-04-02T00:00:00\",\r\n    \"hCreatedBy\": \"Roy\",\r\n    \"hUpdatedDate\": \"2019-08-26T00:00:00\",\r\n    \"hUpdatedBy\": \"Roy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44392/api/hotel/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44392",
+					"path": [
+						"api",
+						"hotel",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44392/api/hotel/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rName\" : \"301\",\r\n    \"rCategory\" : \"Categories 2\",\r\n    \"rPrice\" : 20000,\r\n    \"rIsActive\": false,\r\n    \"rCreatedDate\": \"1998-04-02T00:00:00\",\r\n    \"rCreatedBy\": \"Alex\",\r\n    \"rUpdatedDate\": \"2019-08-26T00:00:00\",\r\n    \"rUpdatedBy\": \"Alex\",\r\n    \"hID\" : \"6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44392/api/hotel/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44392",
+					"path": [
+						"api",
+						"hotel",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44392/api/hotel/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bID\" : \"2\",\r\n    \"bDate\" : \"2020-08-26 00:00:00.000\",\r\n    \"bStatus\" : \"Cancelled\",\r\n    \"rID\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44392/api/hotel/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44392",
+					"path": [
+						"api",
+						"hotel",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44392/api/hotel/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44392/api/hotel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44392",
+					"path": [
+						"api",
+						"hotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44392/api/hotel/",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44392/api/hotel/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44392",
+					"path": [
+						"api",
+						"hotel",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

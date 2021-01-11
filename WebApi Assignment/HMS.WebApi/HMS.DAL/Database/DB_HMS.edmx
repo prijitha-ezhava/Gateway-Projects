@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_HMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_Bookings">
+          <Key>
+            <PropertyRef Name="bID" />
+          </Key>
+          <Property Name="bID" Type="int" Nullable="false" />
+          <Property Name="bDate" Type="datetime" Nullable="false" />
+          <Property Name="bStatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="rID" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_Hotels">
+          <Key>
+            <PropertyRef Name="hID" />
+          </Key>
+          <Property Name="hID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="hAddress" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="hCity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="hPincode" Type="int" Nullable="false" />
+          <Property Name="hContactNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="hContactPerson" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="hWebsite" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="hFacebook" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="hTwitter" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="hIsActive" Type="bit" Nullable="false" />
+          <Property Name="hCreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="hCreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="hUpdatedDate" Type="datetime" Nullable="false" />
+          <Property Name="hUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_Rooms">
+          <Key>
+            <PropertyRef Name="rID" />
+          </Key>
+          <Property Name="rID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="rName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="rCategory" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="rPrice" Type="float" Nullable="false" />
+          <Property Name="rIsActive" Type="bit" Nullable="false" />
+          <Property Name="rCreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="rCreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="rUpdatedDate" Type="datetime" Nullable="false" />
+          <Property Name="rUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="hID" Type="int" />
+        </EntityType>
+        <Association Name="FK__tbl_Booking__rID__07F6335A">
+          <End Role="tbl_Rooms" Type="Self.tbl_Rooms" Multiplicity="0..1" />
+          <End Role="tbl_Bookings" Type="Self.tbl_Bookings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Rooms">
+              <PropertyRef Name="rID" />
+            </Principal>
+            <Dependent Role="tbl_Bookings">
+              <PropertyRef Name="rID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_Rooms__hID__03317E3D">
+          <End Role="tbl_Hotels" Type="Self.tbl_Hotels" Multiplicity="0..1" />
+          <End Role="tbl_Rooms" Type="Self.tbl_Rooms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Hotels">
+              <PropertyRef Name="hID" />
+            </Principal>
+            <Dependent Role="tbl_Rooms">
+              <PropertyRef Name="hID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_HMSModelStoreContainer">
+          <EntitySet Name="tbl_Bookings" EntityType="Self.tbl_Bookings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Hotels" EntityType="Self.tbl_Hotels" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Rooms" EntityType="Self.tbl_Rooms" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__tbl_Booking__rID__07F6335A" Association="Self.FK__tbl_Booking__rID__07F6335A">
+            <End Role="tbl_Rooms" EntitySet="tbl_Rooms" />
+            <End Role="tbl_Bookings" EntitySet="tbl_Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_Rooms__hID__03317E3D" Association="Self.FK__tbl_Rooms__hID__03317E3D">
+            <End Role="tbl_Hotels" EntitySet="tbl_Hotels" />
+            <End Role="tbl_Rooms" EntitySet="tbl_Rooms" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_HMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_Bookings">
+          <Key>
+            <PropertyRef Name="bID" />
+          </Key>
+          <Property Name="bID" Type="Int32" Nullable="false" />
+          <Property Name="bDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="bStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="rID" Type="Int32" />
+          <NavigationProperty Name="tbl_Rooms" Relationship="Self.FK__tbl_Booking__rID__07F6335A" FromRole="tbl_Bookings" ToRole="tbl_Rooms" />
+        </EntityType>
+        <EntityType Name="tbl_Hotels">
+          <Key>
+            <PropertyRef Name="hID" />
+          </Key>
+          <Property Name="hID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="hAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="hCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="hPincode" Type="Int32" Nullable="false" />
+          <Property Name="hContactNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="hContactPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="hWebsite" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="hFacebook" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="hTwitter" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="hIsActive" Type="Boolean" Nullable="false" />
+          <Property Name="hCreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="hCreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="hUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="hUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="tbl_Rooms" Relationship="Self.FK__tbl_Rooms__hID__03317E3D" FromRole="tbl_Hotels" ToRole="tbl_Rooms" />
+        </EntityType>
+        <EntityType Name="tbl_Rooms">
+          <Key>
+            <PropertyRef Name="rID" />
+          </Key>
+          <Property Name="rID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="rCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="rPrice" Type="Double" Nullable="false" />
+          <Property Name="rIsActive" Type="Boolean" Nullable="false" />
+          <Property Name="rCreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="rCreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="rUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="rUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="hID" Type="Int32" />
+          <NavigationProperty Name="tbl_Bookings" Relationship="Self.FK__tbl_Booking__rID__07F6335A" FromRole="tbl_Rooms" ToRole="tbl_Bookings" />
+          <NavigationProperty Name="tbl_Hotels" Relationship="Self.FK__tbl_Rooms__hID__03317E3D" FromRole="tbl_Rooms" ToRole="tbl_Hotels" />
+        </EntityType>
+        <Association Name="FK__tbl_Booking__rID__07F6335A">
+          <End Role="tbl_Rooms" Type="Self.tbl_Rooms" Multiplicity="0..1" />
+          <End Role="tbl_Bookings" Type="Self.tbl_Bookings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Rooms">
+              <PropertyRef Name="rID" />
+            </Principal>
+            <Dependent Role="tbl_Bookings">
+              <PropertyRef Name="rID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_Rooms__hID__03317E3D">
+          <End Role="tbl_Hotels" Type="Self.tbl_Hotels" Multiplicity="0..1" />
+          <End Role="tbl_Rooms" Type="Self.tbl_Rooms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Hotels">
+              <PropertyRef Name="hID" />
+            </Principal>
+            <Dependent Role="tbl_Rooms">
+              <PropertyRef Name="hID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_HMSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_Bookings" EntityType="Self.tbl_Bookings" />
+          <EntitySet Name="tbl_Hotels" EntityType="Self.tbl_Hotels" />
+          <EntitySet Name="tbl_Rooms" EntityType="Self.tbl_Rooms" />
+          <AssociationSet Name="FK__tbl_Booking__rID__07F6335A" Association="Self.FK__tbl_Booking__rID__07F6335A">
+            <End Role="tbl_Rooms" EntitySet="tbl_Rooms" />
+            <End Role="tbl_Bookings" EntitySet="tbl_Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_Rooms__hID__03317E3D" Association="Self.FK__tbl_Rooms__hID__03317E3D">
+            <End Role="tbl_Hotels" EntitySet="tbl_Hotels" />
+            <End Role="tbl_Rooms" EntitySet="tbl_Rooms" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_HMSModelStoreContainer" CdmEntityContainer="DB_HMSEntities">
+          <EntitySetMapping Name="tbl_Bookings">
+            <EntityTypeMapping TypeName="DB_HMSModel.tbl_Bookings">
+              <MappingFragment StoreEntitySet="tbl_Bookings">
+                <ScalarProperty Name="bID" ColumnName="bID" />
+                <ScalarProperty Name="bDate" ColumnName="bDate" />
+                <ScalarProperty Name="bStatus" ColumnName="bStatus" />
+                <ScalarProperty Name="rID" ColumnName="rID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Hotels">
+            <EntityTypeMapping TypeName="DB_HMSModel.tbl_Hotels">
+              <MappingFragment StoreEntitySet="tbl_Hotels">
+                <ScalarProperty Name="hID" ColumnName="hID" />
+                <ScalarProperty Name="hName" ColumnName="hName" />
+                <ScalarProperty Name="hAddress" ColumnName="hAddress" />
+                <ScalarProperty Name="hCity" ColumnName="hCity" />
+                <ScalarProperty Name="hPincode" ColumnName="hPincode" />
+                <ScalarProperty Name="hContactNumber" ColumnName="hContactNumber" />
+                <ScalarProperty Name="hContactPerson" ColumnName="hContactPerson" />
+                <ScalarProperty Name="hWebsite" ColumnName="hWebsite" />
+                <ScalarProperty Name="hFacebook" ColumnName="hFacebook" />
+                <ScalarProperty Name="hTwitter" ColumnName="hTwitter" />
+                <ScalarProperty Name="hIsActive" ColumnName="hIsActive" />
+                <ScalarProperty Name="hCreatedDate" ColumnName="hCreatedDate" />
+                <ScalarProperty Name="hCreatedBy" ColumnName="hCreatedBy" />
+                <ScalarProperty Name="hUpdatedDate" ColumnName="hUpdatedDate" />
+                <ScalarProperty Name="hUpdatedBy" ColumnName="hUpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Rooms">
+            <EntityTypeMapping TypeName="DB_HMSModel.tbl_Rooms">
+              <MappingFragment StoreEntitySet="tbl_Rooms">
+                <ScalarProperty Name="rID" ColumnName="rID" />
+                <ScalarProperty Name="rName" ColumnName="rName" />
+                <ScalarProperty Name="rCategory" ColumnName="rCategory" />
+                <ScalarProperty Name="rPrice" ColumnName="rPrice" />
+                <ScalarProperty Name="rIsActive" ColumnName="rIsActive" />
+                <ScalarProperty Name="rCreatedDate" ColumnName="rCreatedDate" />
+                <ScalarProperty Name="rCreatedBy" ColumnName="rCreatedBy" />
+                <ScalarProperty Name="rUpdatedDate" ColumnName="rUpdatedDate" />
+                <ScalarProperty Name="rUpdatedBy" ColumnName="rUpdatedBy" />
+                <ScalarProperty Name="hID" ColumnName="hID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

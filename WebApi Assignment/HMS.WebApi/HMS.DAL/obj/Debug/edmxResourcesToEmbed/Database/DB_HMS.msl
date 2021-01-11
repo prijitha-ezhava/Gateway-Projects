@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_HMSModelStoreContainer" CdmEntityContainer="DB_HMSEntities">
+    <EntitySetMapping Name="tbl_Bookings">
+      <EntityTypeMapping TypeName="DB_HMSModel.tbl_Bookings">
+        <MappingFragment StoreEntitySet="tbl_Bookings">
+          <ScalarProperty Name="bID" ColumnName="bID" />
+          <ScalarProperty Name="bDate" ColumnName="bDate" />
+          <ScalarProperty Name="bStatus" ColumnName="bStatus" />
+          <ScalarProperty Name="rID" ColumnName="rID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Hotels">
+      <EntityTypeMapping TypeName="DB_HMSModel.tbl_Hotels">
+        <MappingFragment StoreEntitySet="tbl_Hotels">
+          <ScalarProperty Name="hID" ColumnName="hID" />
+          <ScalarProperty Name="hName" ColumnName="hName" />
+          <ScalarProperty Name="hAddress" ColumnName="hAddress" />
+          <ScalarProperty Name="hCity" ColumnName="hCity" />
+          <ScalarProperty Name="hPincode" ColumnName="hPincode" />
+          <ScalarProperty Name="hContactNumber" ColumnName="hContactNumber" />
+          <ScalarProperty Name="hContactPerson" ColumnName="hContactPerson" />
+          <ScalarProperty Name="hWebsite" ColumnName="hWebsite" />
+          <ScalarProperty Name="hFacebook" ColumnName="hFacebook" />
+          <ScalarProperty Name="hTwitter" ColumnName="hTwitter" />
+          <ScalarProperty Name="hIsActive" ColumnName="hIsActive" />
+          <ScalarProperty Name="hCreatedDate" ColumnName="hCreatedDate" />
+          <ScalarProperty Name="hCreatedBy" ColumnName="hCreatedBy" />
+          <ScalarProperty Name="hUpdatedDate" ColumnName="hUpdatedDate" />
+          <ScalarProperty Name="hUpdatedBy" ColumnName="hUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Rooms">
+      <EntityTypeMapping TypeName="DB_HMSModel.tbl_Rooms">
+        <MappingFragment StoreEntitySet="tbl_Rooms">
+          <ScalarProperty Name="rID" ColumnName="rID" />
+          <ScalarProperty Name="rName" ColumnName="rName" />
+          <ScalarProperty Name="rCategory" ColumnName="rCategory" />
+          <ScalarProperty Name="rPrice" ColumnName="rPrice" />
+          <ScalarProperty Name="rIsActive" ColumnName="rIsActive" />
+          <ScalarProperty Name="rCreatedDate" ColumnName="rCreatedDate" />
+          <ScalarProperty Name="rCreatedBy" ColumnName="rCreatedBy" />
+          <ScalarProperty Name="rUpdatedDate" ColumnName="rUpdatedDate" />
+          <ScalarProperty Name="rUpdatedBy" ColumnName="rUpdatedBy" />
+          <ScalarProperty Name="hID" ColumnName="hID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
