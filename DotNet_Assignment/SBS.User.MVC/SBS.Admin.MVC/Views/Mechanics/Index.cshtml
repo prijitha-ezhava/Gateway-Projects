@@ -1,0 +1,86 @@
+﻿@model IEnumerable<SBS.BusinessEntities.ViewModel.MechanicViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    var mechID = TempData["mechanic"];
+
+}
+<head>
+    <style>
+        .main {
+            margin-top: 30px;
+            padding: 10px 15px;
+        }
+
+        .container {
+            width: auto;
+        }
+
+        .page-container {
+            margin-left: 10%;
+            margin-bottom: 10%;
+            margin-right: 5%;
+        }
+
+        .table-heading {
+            background-color: #2a3843;
+            color: white;
+        }
+    </style>
+</head>
+
+<body style="background-color : #ced4da ;">
+    <div class="page-container">
+        <div class="page-wrapper">
+            <h2>Mechanic Details</h2>
+            <p>
+                @Html.ActionLink("Add New Mechanic Details", "Create")
+            </p>
+            <table id="MechanicsIndex"class="table table-striped" style="width: 90%;">
+                <thead class="table-heading">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.MecName)
+                        </th>
+                        <th >
+                            @Html.DisplayNameFor(model => model.MobileNumber)
+                        </th>
+                        <th >
+                            @Html.DisplayNameFor(model => model.EmailID)
+                        </th>
+                        <th >
+                            @Html.DisplayNameFor(model => model.Make)
+                        </th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MecName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MobileNumber)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmailID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Make)
+                            </td>
+
+                            <td>
+                                @*@Html.ActionLink("Add Service", "Create", "Services", new { mechID = item.ID }) |*@
+                                <a href="@Url.Action("Create","Services", new { mechID = item.ID })">Add Services |</a>
+                                <a href="@Url.Action("Index","Services", new { mechID = item.ID })"> Services List</a>
+                                @*@Html.ActionLink("Services List", "Index", "Services", new { mechID = item.ID })*@
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

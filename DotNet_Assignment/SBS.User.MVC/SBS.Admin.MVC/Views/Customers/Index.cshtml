@@ -1,0 +1,122 @@
+﻿@model IEnumerable<SBS.BusinessEntities.ViewModel.CustomerViewModel>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script>
+    function DownloadExcel() {
+        $.ajax({
+            type: "POST",
+            url: "/Customers/ExportToExcel",
+            cache: false,
+            success: function (data) {
+                window.location = '/Customers/Download';
+            },
+            error: function (data) {
+                Materlialize.toast("Something Went Wrong. ", 3000, 'rounded');
+            }
+        });
+    }
+</script>
+<style>
+    .main {
+        margin-top: 30px;
+        padding: 10px 15px;
+    }
+
+    .container {
+        
+        width: auto;
+       
+    }
+
+    .page-container {
+        margin-left: 10%;
+        margin-bottom: 10%;
+        margin-right: 5%;
+    }
+
+    .table-heading {
+        background-color: #2a3843;
+        color: white;
+    }
+</style>
+
+
+
+<body style="background-color : #ced4da ;">
+    <div class="page-container">
+        <div class="page-wrapper">
+            <h2>Customer Data</h2>
+
+            <button onclick="DownloadExcel()" class="btn  btn-success" style="margin-top:20px;">Excel Export</button>
+            </br></br>
+
+            <table id="CustomersIndex"class="table table-striped" style="width: 100%;">
+                <thead class="table-heading">
+                    <tr>
+                        <th style="width:30px;">
+                            @Html.DisplayNameFor(model => model.CustomerName)
+                        </th>
+                        <th style="width:50px;">
+                            @Html.DisplayNameFor(model => model.Address)
+                        </th>
+                        <th style="width:30px;">
+                            @Html.DisplayNameFor(model => model.City)
+                        </th>
+                        <th style="width:30px;">
+                            @Html.DisplayNameFor(model => model.State)
+                        </th>
+                        <th style="width:30px;">
+                            @Html.DisplayNameFor(model => model.ZipCode)
+                        </th>
+                        <th style="width:20px;">
+                            @Html.DisplayNameFor(model => model.EmailID)
+                        </th>
+                        <th style="width:30px;">
+                            @Html.DisplayNameFor(model => model.Mobile)
+                        </th>
+                        <th style="width:30px;">
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(model => item.CustomerName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => item.Address)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => item.City)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => item.State)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => item.ZipCode)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => item.EmailID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => item.Mobile)
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Index","Vehicles", new { customerID = item.ID })">Vehicle List</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</body>

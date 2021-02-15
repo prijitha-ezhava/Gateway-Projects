@@ -1,0 +1,15 @@
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Data\bin\Debug\SBS.Data.dll.config
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Data\bin\Debug\SBS.Data.dll
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Data\bin\Debug\SBS.Data.pdb
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Data\bin\Debug\EntityFramework.dll
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Data\bin\Debug\SBS.BusinessEntities.dll
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Data\bin\Debug\SBS.BusinessEntities.pdb
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Data\bin\Debug\SBS.BusinessEntities.dll.config
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Data\bin\Debug\EntityFramework.xml
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Data\obj\Debug\SBS.Data.csprojAssemblyReference.cache
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Data\obj\Debug\SBS.Data.csproj.CoreCompileInputs.cache
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Data\obj\Debug\SBS.Data.csproj.CopyComplete
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Data\obj\Debug\SBS.Data.dll
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Data\obj\Debug\SBS.Data.pdb

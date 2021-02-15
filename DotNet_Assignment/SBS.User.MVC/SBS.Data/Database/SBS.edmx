@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_VMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_Customers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="State" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="ZipCode" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="EmailID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="11" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_Mechanics">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MecName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="MobileNumber" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="EmailID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Make" Type="nvarchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_Services">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServiceName" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Price" Type="float" Nullable="false" />
+          <Property Name="Duration" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="mechanicID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_Vehicles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="licensePlate" Type="nchar" MaxLength="11" Nullable="false" />
+          <Property Name="Make" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Model" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="registrationDate" Type="date" Nullable="false" />
+          <Property Name="chasisNo" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="custID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_tbl_Services_tbl_Mechanics">
+          <End Role="tbl_Mechanics" Type="Self.tbl_Mechanics" Multiplicity="1" />
+          <End Role="tbl_Services" Type="Self.tbl_Services" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Mechanics">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbl_Services">
+              <PropertyRef Name="mechanicID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Vehicles_tbl_customers">
+          <End Role="tbl_Customers" Type="Self.tbl_Customers" Multiplicity="1" />
+          <End Role="tbl_Vehicles" Type="Self.tbl_Vehicles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Customers">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbl_Vehicles">
+              <PropertyRef Name="custID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_VMSModelStoreContainer">
+          <EntitySet Name="tbl_Customers" EntityType="Self.tbl_Customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Mechanics" EntityType="Self.tbl_Mechanics" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Services" EntityType="Self.tbl_Services" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Vehicles" EntityType="Self.tbl_Vehicles" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tbl_Services_tbl_Mechanics" Association="Self.FK_tbl_Services_tbl_Mechanics">
+            <End Role="tbl_Mechanics" EntitySet="tbl_Mechanics" />
+            <End Role="tbl_Services" EntitySet="tbl_Services" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Vehicles_tbl_customers" Association="Self.FK_tbl_Vehicles_tbl_customers">
+            <End Role="tbl_Customers" EntitySet="tbl_Customers" />
+            <End Role="tbl_Vehicles" EntitySet="tbl_Vehicles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_VMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_Customers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="State" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ZipCode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="EmailID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="tbl_Vehicles" Relationship="Self.FK_tbl_Vehicles_tbl_customers" FromRole="tbl_Customers" ToRole="tbl_Vehicles" />
+        </EntityType>
+        <EntityType Name="tbl_Mechanics">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MecName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MobileNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmailID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Make" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="tbl_Services" Relationship="Self.FK_tbl_Services_tbl_Mechanics" FromRole="tbl_Mechanics" ToRole="tbl_Services" />
+        </EntityType>
+        <EntityType Name="tbl_Services">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Price" Type="Double" Nullable="false" />
+          <Property Name="Duration" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="mechanicID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbl_Mechanics" Relationship="Self.FK_tbl_Services_tbl_Mechanics" FromRole="tbl_Services" ToRole="tbl_Mechanics" />
+        </EntityType>
+        <EntityType Name="tbl_Vehicles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="licensePlate" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Make" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="registrationDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="chasisNo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="custID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbl_Customers" Relationship="Self.FK_tbl_Vehicles_tbl_customers" FromRole="tbl_Vehicles" ToRole="tbl_Customers" />
+        </EntityType>
+        <Association Name="FK_tbl_Vehicles_tbl_customers">
+          <End Role="tbl_Customers" Type="Self.tbl_Customers" Multiplicity="1" />
+          <End Role="tbl_Vehicles" Type="Self.tbl_Vehicles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Customers">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbl_Vehicles">
+              <PropertyRef Name="custID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Services_tbl_Mechanics">
+          <End Role="tbl_Mechanics" Type="Self.tbl_Mechanics" Multiplicity="1" />
+          <End Role="tbl_Services" Type="Self.tbl_Services" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Mechanics">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbl_Services">
+              <PropertyRef Name="mechanicID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_VMSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_Customers" EntityType="Self.tbl_Customers" />
+          <EntitySet Name="tbl_Mechanics" EntityType="Self.tbl_Mechanics" />
+          <EntitySet Name="tbl_Services" EntityType="Self.tbl_Services" />
+          <EntitySet Name="tbl_Vehicles" EntityType="Self.tbl_Vehicles" />
+          <AssociationSet Name="FK_tbl_Vehicles_tbl_customers" Association="Self.FK_tbl_Vehicles_tbl_customers">
+            <End Role="tbl_Customers" EntitySet="tbl_Customers" />
+            <End Role="tbl_Vehicles" EntitySet="tbl_Vehicles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Services_tbl_Mechanics" Association="Self.FK_tbl_Services_tbl_Mechanics">
+            <End Role="tbl_Mechanics" EntitySet="tbl_Mechanics" />
+            <End Role="tbl_Services" EntitySet="tbl_Services" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_VMSModelStoreContainer" CdmEntityContainer="DB_VMSEntities">
+          <EntitySetMapping Name="tbl_Customers">
+            <EntityTypeMapping TypeName="DB_VMSModel.tbl_Customers">
+              <MappingFragment StoreEntitySet="tbl_Customers">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Mechanics">
+            <EntityTypeMapping TypeName="DB_VMSModel.tbl_Mechanics">
+              <MappingFragment StoreEntitySet="tbl_Mechanics">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MecName" ColumnName="MecName" />
+                <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="Make" ColumnName="Make" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Services">
+            <EntityTypeMapping TypeName="DB_VMSModel.tbl_Services">
+              <MappingFragment StoreEntitySet="tbl_Services">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="mechanicID" ColumnName="mechanicID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Vehicles">
+            <EntityTypeMapping TypeName="DB_VMSModel.tbl_Vehicles">
+              <MappingFragment StoreEntitySet="tbl_Vehicles">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="licensePlate" ColumnName="licensePlate" />
+                <ScalarProperty Name="Make" ColumnName="Make" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="registrationDate" ColumnName="registrationDate" />
+                <ScalarProperty Name="chasisNo" ColumnName="chasisNo" />
+                <ScalarProperty Name="custID" ColumnName="custID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
