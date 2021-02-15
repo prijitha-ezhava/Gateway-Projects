@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Product Management</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Alert Dialog Box CSS-->
+    <link href="~/Content/alertifyjs/alertify.min.css" rel="stylesheet" />
+    <link href="~/Content/alertifyjs/themes/default.min.css" rel="stylesheet" />
+    <!-- Alert Dialog Box CSS-->
+
+    <!-- Product List CSS Links -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.3.2/css/fixedColumns.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
+    <!-- Product List CSS Links -->
+
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            padding: 15px;
+            width: 100%;
+            background-color: #000100;
+            color: white;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                </button>
+                <a href="#" class="navbar-brand" style="color:white"><i class="fa fa-cube"></i>  Product Management</a>
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    @if (@Session["Username"] != null)
+                    {
+
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+
+
+    <div class="footer">
+        <div class="container body-content">
+            <p>&copy; @DateTime.Now.Year - Designed and Developed by | Prijitha Ezhava</p>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/alertify.min.js"></script>
+
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    @RenderSection("scripts", required: false)
+
+    <!-- Product List JS Links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+    <!-- Product List JS Links -->
+
+    <!-- Initialize Datatable -->
+    <script>
+        $(document).ready(function () {
+            var table = $('#tbl_ProductList').DataTable({
+                fixedHeader: true,
+                scrollX: true,
+                scrollCollapse: true,
+                "searching": true,
+                "lengthChange": true,
+                "paging": true,
+                "ordering": true,
+                "info": true,
+            });
+        });
+
+
+    </script>
+    <!-- Initialize Datatable -->
+</body>
+</html>
