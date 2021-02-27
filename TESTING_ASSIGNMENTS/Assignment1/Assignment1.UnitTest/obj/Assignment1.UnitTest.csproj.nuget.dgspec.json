@@ -1,0 +1,171 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.UnitTest\\Assignment1.UnitTest.csproj": {}
+  },
+  "projects": {
+    "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.BusinessEntities\\Assignment1.BusinessEntities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.BusinessEntities\\Assignment1.BusinessEntities.csproj",
+        "projectName": "Assignment1.BusinessEntities",
+        "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.BusinessEntities\\Assignment1.BusinessEntities.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.Business\\Assignment1.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.Business\\Assignment1.Business.csproj",
+        "projectName": "Assignment1.Business",
+        "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.Business\\Assignment1.Business.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.BusinessEntities\\Assignment1.BusinessEntities.csproj": {
+                "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.BusinessEntities\\Assignment1.BusinessEntities.csproj"
+              },
+              "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.Data\\Assignment1.Data.csproj": {
+                "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.Data\\Assignment1.Data.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.Data\\Assignment1.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.Data\\Assignment1.Data.csproj",
+        "projectName": "Assignment1.Data",
+        "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.Data\\Assignment1.Data.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.BusinessEntities\\Assignment1.BusinessEntities.csproj": {
+                "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.BusinessEntities\\Assignment1.BusinessEntities.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.UnitTest\\Assignment1.UnitTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.UnitTest\\Assignment1.UnitTest.csproj",
+        "projectName": "Assignment1.UnitTest",
+        "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.UnitTest\\Assignment1.UnitTest.csproj",
+        "packagesPath": "C:\\Users\\PRIJITHA\\.nuget\\packages\\",
+        "outputPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.UnitTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\PRIJITHA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.BusinessEntities\\Assignment1.BusinessEntities.csproj": {
+                "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.BusinessEntities\\Assignment1.BusinessEntities.csproj"
+              },
+              "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.Business\\Assignment1.Business.csproj": {
+                "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.Business\\Assignment1.Business.csproj"
+              },
+              "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.Data\\Assignment1.Data.csproj": {
+                "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.Data\\Assignment1.Data.csproj"
+              },
+              "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.WebAPI\\Assignment1.WebAPI.csproj": {
+                "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.WebAPI\\Assignment1.WebAPI.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.2.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.extensibility.core": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.WebAPI\\Assignment1.WebAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.WebAPI\\Assignment1.WebAPI.csproj",
+        "projectName": "Assignment1.WebAPI",
+        "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.WebAPI\\Assignment1.WebAPI.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.BusinessEntities\\Assignment1.BusinessEntities.csproj": {
+                "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.BusinessEntities\\Assignment1.BusinessEntities.csproj"
+              },
+              "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.Business\\Assignment1.Business.csproj": {
+                "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment1\\Assignment1.Business\\Assignment1.Business.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    }
+  }
+}

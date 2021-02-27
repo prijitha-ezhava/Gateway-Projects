@@ -1,0 +1,6 @@
+D:\ACADEMICS\GATEWAY GROUPS\PRE JOINING SESSIONS\TESTING\TESTING_ASSIGNMENTS\Assignment1\Assignment1.BusinessEntities\bin\Debug\Assignment1.BusinessEntities.dll
+D:\ACADEMICS\GATEWAY GROUPS\PRE JOINING SESSIONS\TESTING\TESTING_ASSIGNMENTS\Assignment1\Assignment1.BusinessEntities\bin\Debug\Assignment1.BusinessEntities.pdb
+D:\ACADEMICS\GATEWAY GROUPS\PRE JOINING SESSIONS\TESTING\TESTING_ASSIGNMENTS\Assignment1\Assignment1.BusinessEntities\obj\Debug\Assignment1.BusinessEntities.csprojAssemblyReference.cache
+D:\ACADEMICS\GATEWAY GROUPS\PRE JOINING SESSIONS\TESTING\TESTING_ASSIGNMENTS\Assignment1\Assignment1.BusinessEntities\obj\Debug\Assignment1.BusinessEntities.csproj.CoreCompileInputs.cache
+D:\ACADEMICS\GATEWAY GROUPS\PRE JOINING SESSIONS\TESTING\TESTING_ASSIGNMENTS\Assignment1\Assignment1.BusinessEntities\obj\Debug\Assignment1.BusinessEntities.dll
+D:\ACADEMICS\GATEWAY GROUPS\PRE JOINING SESSIONS\TESTING\TESTING_ASSIGNMENTS\Assignment1\Assignment1.BusinessEntities\obj\Debug\Assignment1.BusinessEntities.pdb
