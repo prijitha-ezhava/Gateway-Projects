@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\PRIJITHA\source\repos\HMS.WebApi\HMS.DAL\Database\DB_HMS.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.DAL\Database\DB_HMS.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

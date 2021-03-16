@@ -23,9 +23,9 @@ namespace HMS.BAL
             return _hotelRepository.BookRoom(model);
         }
 
-        public List<Booking> CheckBooking(Booking model)
+        public bool CheckBooking(DateTime date)
         {
-            return _hotelRepository.CheckBooking(model);
+            return _hotelRepository.CheckBooking(date);
         }
 
         public string CreateHotel(Hotel model)
@@ -55,19 +55,24 @@ namespace HMS.BAL
             return _hotelRepository.GetHotel(Id);
         }
 
-        public IQueryable GetRoomsByParameter(Hotel model)
+        public List<Room> GetRoomsByParameter(string Category, string City, string Pincode, string Price)
         {
-            return _hotelRepository.GetRoomsByParameter(model);
+            return _hotelRepository.GetRoomsByParameter(Category, City, Pincode, Price);
         }
 
-        public string UpdateBookingDate(Booking model)
+        /* public IQueryable GetRoomsByParameter(Hotel model)
+         {
+             return _hotelRepository.GetRoomsByParameter(model);
+         }*/
+
+        public string UpdateBookingDate(Booking model, int id)
         {
-            return _hotelRepository.UpdateBookingDate(model);
+            return _hotelRepository.UpdateBookingDate(model,id);
         }
 
-        public string UpdateBookingStatus(Booking model)
+        public string UpdateBookingStatus(Booking model, int id)
         {
-            return _hotelRepository.UpdateBookingStatus(model);
+            return _hotelRepository.UpdateBookingStatus(model,id);
         }
     }
 }

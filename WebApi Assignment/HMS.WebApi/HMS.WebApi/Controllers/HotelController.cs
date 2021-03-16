@@ -1,5 +1,6 @@
 ﻿using HMS.BAL.Interface;
 using HMS.Models;
+using System.Web.Http.Cors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ using System.Web.Http;
 
 namespace HMS.WebApi.Controllers
 {
+    [EnableCors(origins: "https://localhost:44392/", headers:"*",methods:"*")]
     public class HotelController : ApiController
     {
         private readonly IHotelDetails _hotelDetails;
@@ -18,6 +20,7 @@ namespace HMS.WebApi.Controllers
             _hotelDetails = hotelDetails;
         }
 
+        [Route("api/Hotel/GetAllHotels")]
         // GET: api/Hotel
         public List<Hotel> GetAllHotels()
         {
@@ -27,17 +30,20 @@ namespace HMS.WebApi.Controllers
             return hotel;
         }
 
-        public IQueryable GetRoomsByParameter(Hotel model)
+        [Route("api/Hotel/GetRoomsByParameter/{category}/{city}/{pincode}/{price}")]
+        public List<Room> GetRoomsByParameter(string Category, string City, string Pincode, string Price)
         {
-            return _hotelDetails.GetRoomsByParameter(model);
+            return _hotelDetails.GetRoomsByParameter(Category, City, Pincode, Price);
         }
 
+        [Route("api/Hotel/Get/{id}")]
         // GET: api/Hotel/5
         public Hotel Get(int id)
         {
             return _hotelDetails.GetHotel(id);
         }
 
+        [Route("api/Hotel/CreateHotel")]
         // POST: api/Hotel
         //Create Hotel
         public string CreateHotel([FromBody]Hotel model)
@@ -45,6 +51,7 @@ namespace HMS.WebApi.Controllers
             return _hotelDetails.CreateHotel(model);
         }
 
+        [Route("api/Hotel/CreateRoom")]
         // POST: api/Hotel
         //Create Room
         public string CreateRoom([FromBody]Room model)
@@ -52,6 +59,8 @@ namespace HMS.WebApi.Controllers
             return _hotelDetails.CreateRoom(model);
         }
 
+
+        [Route("api/Hotel/BookRoom")]
         // POST: api/Hotel
         //Book Room
 
@@ -60,29 +69,33 @@ namespace HMS.WebApi.Controllers
             return _hotelDetails.BookRoom(model);
         }
 
+
+        [Route("api/Hotel/UpdateBookingDate/{id}")]
         // PUT: api/Hotel/5
         //Update Booking Date
         [HttpPut]
-        public string UpdateBookingDate([FromBody] Booking model)
+        public string UpdateBookingDate(int id, [FromBody] Booking model)
         {
-            return _hotelDetails.UpdateBookingDate(model);
+            return _hotelDetails.UpdateBookingDate(model,id);
         }
 
-
+        [Route("api/Hotel/UpdateBookingStatus/{id}")]
         //Update Booking Status
-        //[HttpPut]
-        public string UpdateBookingStatus([FromBody] Booking model)
+        [HttpPut]
+        public string UpdateBookingStatus(int id, [FromBody] Booking model)
         {
-            return _hotelDetails.UpdateBookingStatus(model);
+            return _hotelDetails.UpdateBookingStatus(model,id);
         }
 
+        [Route("api/Hotel/CheckBooking/{date}")]
         //Check Room Availability
         [HttpGet]
-        public List<Booking> CheckBooking([FromBody] Booking model)
+        public bool CheckBooking(DateTime date)
         {
-            return _hotelDetails.CheckBooking(model);
+            return _hotelDetails.CheckBooking(date);
         }
 
+        [Route("api/Hotel/DeleteBooking/{id}")]
         // DELETE: api/Hotel/5
         public string DeleteBooking(int id)
         {

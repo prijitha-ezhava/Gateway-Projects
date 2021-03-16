@@ -29,7 +29,7 @@ namespace HMS.DAL.Database
         public string rCreatedBy { get; set; }
         public System.DateTime rUpdatedDate { get; set; }
         public string rUpdatedBy { get; set; }
-        public Nullable<int> hID { get; set; }
+        public int hID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_Bookings> tbl_Bookings { get; set; }

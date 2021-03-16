@@ -17,7 +17,7 @@ namespace HMS.DAL.Database
         public int bID { get; set; }
         public System.DateTime bDate { get; set; }
         public string bStatus { get; set; }
-        public Nullable<int> rID { get; set; }
+        public int rID { get; set; }
     
         public virtual tbl_Rooms tbl_Rooms { get; set; }
     }

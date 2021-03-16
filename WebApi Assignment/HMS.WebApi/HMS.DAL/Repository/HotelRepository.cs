@@ -30,7 +30,7 @@ namespace HMS.DAL.Repository
 
                     booking.bDate = model.bDate;
                     booking.bStatus = model.bStatus;
-                    booking.rID = model.rID;
+                    booking.rID = (int)model.rID;
 
                     entity.rIsActive = true;
 
@@ -47,34 +47,18 @@ namespace HMS.DAL.Repository
         }
 
         // GET availability of room on some particular date
-        public List<Booking> CheckBooking(Booking model)
+        public bool CheckBooking(DateTime date)
         {
-            List<Booking> booking = new List<Booking>();
-            var room = _dbContext.tbl_Rooms.ToList();
+            var a = _dbContext.tbl_Bookings.Where(h => h.bDate == date.Date && (h.bStatus.Equals("optional") || h.bStatus.Equals("Definitive")) ).ToList();
 
-            if (room != null)
+            if (a.Count() < 2)
             {
-                foreach (var item in room)
-                {
-                    var entity = _dbContext.tbl_Bookings.Where(x => x.rID == item.rID && x.bDate == model.bDate);
-                    if (entity.Count() != 0)
-                    {
-                        foreach (var data in entity)
-                        {
-                            Room rm = new Room();
-                            if (data.bStatus == "Deleted")
-                            {
-                                rm.rIsActive = true;
-                            }
-                            else
-                            {
-                                rm.rIsActive = false;
-                            }
-                        }
-                    }
-                }
+                return true;
             }
-            return booking;
+            else
+            {
+                return false;
+            }
         }
 
         //POST 5-10 hotels with details of hotel and 3-5 rooms in each hotel with different price and different category.
@@ -122,7 +106,7 @@ namespace HMS.DAL.Repository
                 if (model != null)
                 {
                     Database.tbl_Rooms rooms = new Database.tbl_Rooms();
-                    rooms.hID = model.hID;
+                    rooms.hID = (int)model.hID;
                     rooms.rName = model.rName;
                     rooms.rCategory = model.rCategory;
                     rooms.rPrice = model.rPrice;
@@ -233,12 +217,107 @@ namespace HMS.DAL.Repository
             return hotel;
         }
 
-        //GET all rooms of hotels with optional parameter by hotel city, pin code, Price, Category.
-        public IQueryable GetRoomsByParameter(Hotel model)
+        public List<Room> GetRoomsByParameter(string Category, string City, string Pincode, string Price)
         {
+            var entity = _dbContext.tbl_Rooms.Where(h => h.rCategory ==(Category) || h.tbl_Hotels.hCity==(City) || h.tbl_Hotels.hPincode.ToString()==(Pincode) || h.tbl_Hotels.hPincode.ToString()==(Price)).ToList();
+            List<Room> list = new List<Room>();
+            if (_dbContext != null)
+            {
+                foreach (var item in entity)
+                {
+                    Room room = new Room();
+                    room.rID = item.rID;
+                    room.hID = item.hID;
+                    room.rName = item.rName;
+                    room.rCategory = item.rCategory;
+                    room.rPrice = item.rPrice;
+                    room.rIsActive = item.rIsActive;
+                    room.rCreatedDate = item.rCreatedDate;
+                    room.rCreatedBy = item.rCreatedBy;
+                    room.rUpdatedDate = item.rUpdatedDate;
+                    room.rUpdatedBy = item.rUpdatedBy;
+                    list.Add(room);
+                }
+            }
+            return list;
+        }
+
+        //public List<Room> GetRoomsByCity(string City)
+        //{
+        //    var entity = _dbContext.tbl_Rooms.Where(h => h.tbl_Hotels.hCity.Equals(City)).ToList();
+        //    List<Room> list = new List<Room>();
+        //    if (_dbContext != null)
+        //    {
+        //        foreach (var item in entity)
+        //        {
+        //            Room room = new Room();
+        //            room.rID = item.rID;
+        //            room.hID = item.hID;
+        //            room.rName = item.rName;
+        //            room.rCategory = item.rCategory;
+        //            room.rPrice = item.rPrice;
+        //            room.rIsActive = item.rIsActive;
+        //            room.rCreatedDate = item.rCreatedDate;
+        //            room.rCreatedBy = item.rCreatedBy;
+        //            list.Add(room);
+        //        }
+        //    }
+        //    return list;
+        //}
+
+        //public List<Room> GetRoomsByPincode(string Pincode)
+        //{
+        //    var entity = _dbContext.tbl_Rooms.Where(h => h.tbl_Hotels.hPincode.ToString().Equals(Pincode)).ToList();
+        //    List<Room> list = new List<Room>();
+        //    if (_dbContext != null)
+        //    {
+        //        foreach (var item in entity)
+        //        {
+        //            Room room = new Room();
+        //            room.rID = item.rID;
+        //            room.hID = item.hID;
+        //            room.rName = item.rName;
+        //            room.rCategory = item.rCategory;
+        //            room.rPrice = item.rPrice;
+        //            room.rIsActive = item.rIsActive;
+        //            room.rCreatedDate = item.rCreatedDate;
+        //            room.rCreatedBy = item.rCreatedBy;
+        //            list.Add(room);
+        //        }
+        //    }
+        //    return list;
+        //}
+
+        //public List<Room> GetRoomsByPrice(string price)
+        //{
+        //    var entity = _dbContext.tbl_Rooms.Where(h => h.tbl_Hotels.hPincode.ToString().Equals(price)).ToList();
+        //    List<Room> list = new List<Room>();
+        //    if (_dbContext != null)
+        //    {
+        //        foreach (var item in entity)
+        //        {
+        //            Room room = new Room();
+        //            room.rID = item.rID;
+        //            room.hID = item.hID;
+        //            room.rName = item.rName;
+        //            room.rCategory = item.rCategory;
+        //            room.rPrice = item.rPrice;
+        //            room.rIsActive = item.rIsActive;
+        //            room.rCreatedDate = item.rCreatedDate;
+        //            room.rCreatedBy = item.rCreatedBy;
+        //            list.Add(room);
+        //        }
+        //    }
+        //    return list;
+        //}
+
+        //GET all rooms of hotels with optional parameter by hotel city, pin code, Price, Category.
+        /*public IQueryable GetRoomsByParameter(Hotel model)
+        {
+          
             var roomInfo = from hotels in _dbContext.tbl_Hotels
                            join rooms in _dbContext.tbl_Rooms on hotels.hID equals rooms.hID
-                           where hotels.hCity == model.hCity || hotels.hPincode == model.hPincode
+                           where hotels.hCity == model.hCity || hotels.hPincode == model.hPincode ||
                            orderby rooms.rPrice
                            select new
                            {
@@ -252,14 +331,14 @@ namespace HMS.DAL.Repository
                                hotels.hCity,
                            };
             return roomInfo;
-        }
+        }*/
 
         // PUT update booking date for any room by Id
-        public string UpdateBookingDate(Booking model)
+        public string UpdateBookingDate(Booking model, int id)
         {
             try
             {
-                var entity = _dbContext.tbl_Bookings.Find(model.bID);
+                var entity = _dbContext.tbl_Bookings.Find(id);
                 if (entity != null)
                 {
                     entity.bDate = model.bDate;
@@ -276,11 +355,11 @@ namespace HMS.DAL.Repository
 
 
         //PUT update booking status by booking Id(optional status to Definitive or Cancelled)
-        public string UpdateBookingStatus(Booking model)
+        public string UpdateBookingStatus(Booking model, int id)
         {
             try
             {
-                var entity = _dbContext.tbl_Bookings.Find(model.bID);
+                var entity = _dbContext.tbl_Bookings.Find(id);
                 if(entity!=null)
                 {
                     entity.bStatus = model.bStatus;

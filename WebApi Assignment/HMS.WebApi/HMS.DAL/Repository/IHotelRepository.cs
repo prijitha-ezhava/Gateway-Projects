@@ -14,10 +14,13 @@ namespace HMS.DAL.Repository
         string CreateHotel(Hotel model);
         string CreateRoom(Room model);
         string BookRoom(Booking model);
-        List<Booking> CheckBooking(Booking model);
-        IQueryable GetRoomsByParameter(Hotel model);
+        bool CheckBooking(DateTime date);
+       /* List<Room> GetRoomsByCity(string City);
+        List<Room> GetRoomsByPincode(string Pincode);
+        List<Room> GetRoomsByPrice(string price);*/
+        List<Room> GetRoomsByParameter(string Category, string City, string Pincode, string Price);
         string DeleteBooking(int Id);
-       string UpdateBookingDate(Booking model);
-        string UpdateBookingStatus(Booking model);
+       string UpdateBookingDate(Booking model, int id);
+        string UpdateBookingStatus(Booking model, int id);
     }
 }

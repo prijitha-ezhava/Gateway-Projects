@@ -14,10 +14,11 @@ namespace HMS.BAL.Interface
         string CreateHotel(Hotel model);
         string CreateRoom(Room model);
         string BookRoom(Booking model);
-        List<Booking> CheckBooking(Booking model);
-        IQueryable GetRoomsByParameter(Hotel model);
+        bool CheckBooking(DateTime date);
+        /* IQueryable GetRoomsByParameter(Hotel model);*/
+        List<Room> GetRoomsByParameter(string Category, string City, string Pincode, string Price);
         string DeleteBooking(int Id);
-        string UpdateBookingDate(Booking model);
-        string UpdateBookingStatus(Booking model);
+        string UpdateBookingDate(Booking model, int id);
+        string UpdateBookingStatus(Booking model, int id);
     }
 }

@@ -12,3 +12,17 @@ C:\Users\PRIJITHA\source\repos\HMS.WebApi\HMS.DAL\bin\Debug\EntityFramework.dll
 C:\Users\PRIJITHA\source\repos\HMS.WebApi\HMS.DAL\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\PRIJITHA\source\repos\HMS.WebApi\HMS.DAL\bin\Debug\EntityFramework.xml
 C:\Users\PRIJITHA\source\repos\HMS.WebApi\HMS.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.DAL\obj\Debug\HMS.DAL.csprojAssemblyReference.cache
+C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.DAL\obj\Debug\HMS.DAL.csproj.CoreCompileInputs.cache
+C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.DAL\obj\Debug\HMS.DAL.dll
+C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.DAL\obj\Debug\HMS.DAL.pdb
+C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.DAL\bin\Debug\HMS.DAL.dll.config
+C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.DAL\bin\Debug\HMS.DAL.dll
+C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.DAL\bin\Debug\HMS.DAL.pdb
+C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.DAL\bin\Debug\EntityFramework.dll
+C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.DAL\bin\Debug\HMS.Models.dll
+C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.DAL\bin\Debug\HMS.Models.pdb
+C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.DAL\bin\Debug\EntityFramework.xml
+C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.DAL\obj\Debug\HMS.DAL.csproj.CopyComplete

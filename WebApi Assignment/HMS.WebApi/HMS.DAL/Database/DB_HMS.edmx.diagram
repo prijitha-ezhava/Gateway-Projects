@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="55c6db4318214210854a3cd642746679" Name="Diagram1">
-        <EntityTypeShape EntityType="DB_HMSModel.tbl_Bookings" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_HMSModel.tbl_Hotels" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_HMSModel.tbl_Rooms" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
-        <AssociationConnector Association="DB_HMSModel.FK__tbl_Booking__rID__07F6335A" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_HMSModel.FK__tbl_Rooms__hID__03317E3D" ManuallyRouted="false" />
+      <Diagram DiagramId="090046a54b03406b9384b2e6f8e54c57" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_HMSModel.tbl_Bookings" Width="1.5" PointX="7.25" PointY="1" />
+        <EntityTypeShape EntityType="DB_HMSModel.tbl_Hotels" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_HMSModel.tbl_Rooms" Width="1.5" PointX="4.75" PointY="0.75" />
+        <AssociationConnector Association="DB_HMSModel.FK_tbl_Bookings_tbl_Rooms" />
+        <AssociationConnector Association="DB_HMSModel.FK_tbl_Rooms_tbl_Hotels" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
