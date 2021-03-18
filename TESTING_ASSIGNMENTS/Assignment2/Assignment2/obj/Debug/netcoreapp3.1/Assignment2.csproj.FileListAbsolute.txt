@@ -11,3 +11,16 @@ D:\ACADEMICS\GATEWAY GROUPS\PRE JOINING SESSIONS\TESTING\TESTING_ASSIGNMENTS\Ass
 D:\ACADEMICS\GATEWAY GROUPS\PRE JOINING SESSIONS\TESTING\TESTING_ASSIGNMENTS\Assignment2\Assignment2\obj\Debug\netcoreapp3.1\Assignment2.dll
 D:\ACADEMICS\GATEWAY GROUPS\PRE JOINING SESSIONS\TESTING\TESTING_ASSIGNMENTS\Assignment2\Assignment2\obj\Debug\netcoreapp3.1\Assignment2.pdb
 D:\ACADEMICS\GATEWAY GROUPS\PRE JOINING SESSIONS\TESTING\TESTING_ASSIGNMENTS\Assignment2\Assignment2\obj\Debug\netcoreapp3.1\Assignment2.genruntimeconfig.cache
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\TESTING_ASSIGNMENTS\Assignment2\Assignment2\bin\Debug\netcoreapp3.1\Assignment2.exe
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\TESTING_ASSIGNMENTS\Assignment2\Assignment2\bin\Debug\netcoreapp3.1\Assignment2.deps.json
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\TESTING_ASSIGNMENTS\Assignment2\Assignment2\bin\Debug\netcoreapp3.1\Assignment2.runtimeconfig.json
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\TESTING_ASSIGNMENTS\Assignment2\Assignment2\bin\Debug\netcoreapp3.1\Assignment2.runtimeconfig.dev.json
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\TESTING_ASSIGNMENTS\Assignment2\Assignment2\bin\Debug\netcoreapp3.1\Assignment2.dll
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\TESTING_ASSIGNMENTS\Assignment2\Assignment2\bin\Debug\netcoreapp3.1\Assignment2.pdb
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\TESTING_ASSIGNMENTS\Assignment2\Assignment2\obj\Debug\netcoreapp3.1\Assignment2.csprojAssemblyReference.cache
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\TESTING_ASSIGNMENTS\Assignment2\Assignment2\obj\Debug\netcoreapp3.1\Assignment2.AssemblyInfoInputs.cache
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\TESTING_ASSIGNMENTS\Assignment2\Assignment2\obj\Debug\netcoreapp3.1\Assignment2.AssemblyInfo.cs
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\TESTING_ASSIGNMENTS\Assignment2\Assignment2\obj\Debug\netcoreapp3.1\Assignment2.csproj.CoreCompileInputs.cache
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\TESTING_ASSIGNMENTS\Assignment2\Assignment2\obj\Debug\netcoreapp3.1\Assignment2.dll
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\TESTING_ASSIGNMENTS\Assignment2\Assignment2\obj\Debug\netcoreapp3.1\Assignment2.pdb
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\TESTING_ASSIGNMENTS\Assignment2\Assignment2\obj\Debug\netcoreapp3.1\Assignment2.genruntimeconfig.cache

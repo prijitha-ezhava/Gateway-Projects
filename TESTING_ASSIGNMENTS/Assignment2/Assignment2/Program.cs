@@ -43,7 +43,8 @@ namespace Assignment2
 
 
             //Return a capitalized version of given input string
-            string result = ExtensionMethod.ConvertFirstLetterToUpper(inputString);
+            inputString = "prijitha ezhava";
+            string result = ExtensionMethod.CapitalizeString(inputString);
             Console.WriteLine("---------------------------------------------------------------");
             Console.WriteLine("First Letter of " + "\"" + inputString + "\"" + " to Upper Case : " + result);
             Console.WriteLine("---------------------------------------------------------------");
@@ -82,8 +83,10 @@ namespace Assignment2
 
             //Convert an input string to integer.
             Console.WriteLine("-------------------------------------------------------------------------------");
-            if (num.ConvertStringToInteger() == null)
+            if (num.ConvertStringToInteger()==null)
+            {
                 Console.WriteLine("\"" + num + "\" can not be converted from String to Integer");
+            }
             else
                 Console.WriteLine("The numeric value is : " + num.ConvertStringToInteger());
             Console.WriteLine("-------------------------------------------------------------------------------");

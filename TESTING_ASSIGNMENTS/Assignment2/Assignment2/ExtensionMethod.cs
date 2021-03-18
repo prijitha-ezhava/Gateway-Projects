@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 
@@ -35,7 +36,7 @@ namespace Assignment2
             if (inputString.Length > 0)
             {
                 TextInfo text = new CultureInfo("en-US", false).TextInfo;
-                inputString = text.ToTitleCase(inputString);
+                inputString = text.ToTitleCase(inputString.ToLower());
                 return new string(inputString);
             }
             return inputString;
@@ -71,7 +72,7 @@ namespace Assignment2
         }
 
         //Return a capitalized version of given input string.
-        public static string ConvertFirstLetterToUpper(this string inputString)
+      /*  public static string ConvertFirstLetterToUpper(this string inputString)
         {
             if (inputString.Length > 0)
             {
@@ -80,11 +81,13 @@ namespace Assignment2
                 return new string(charArray);
             }
             return inputString;
-        }
-        /*public static string CapitalizeString(this string inputString)
-        {
-            return char.ToUpper(inputString[0]) + inputString.Substring(1);
         }*/
+
+        public static string CapitalizeString(this string inputString)
+        {
+            //return string.ToUpper(inputString[0]) + inputString.Substring(1);
+            return inputString.First().ToString().ToUpper() + inputString.Substring(1).ToLower();
+        }
 
 
         //Find if all the characters of a string is in upper case.
@@ -147,14 +150,16 @@ namespace Assignment2
         }
 
         //Convert an input string to integer.
-        public static int? ConvertStringToInteger(this string inputString)
+        public static int ConvertStringToInteger(this string inputString)
         {
-            if (inputString.IsValidNumeric())
+            int result;
+            if (!int.TryParse(inputString,out result))
             {
-                return int.Parse(inputString);
+                return result = 0 ;
             }
             else
-                return null;
+                return result;
+
         }
     }
 }

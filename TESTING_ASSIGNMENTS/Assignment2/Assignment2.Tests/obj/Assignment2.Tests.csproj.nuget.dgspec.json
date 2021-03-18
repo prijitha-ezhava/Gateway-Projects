@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2.Tests\\Assignment2.Tests.csproj": {}
+    "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2.Tests\\Assignment2.Tests.csproj": {}
   },
   "projects": {
-    "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2.Tests\\Assignment2.Tests.csproj": {
+    "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2.Tests\\Assignment2.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2.Tests\\Assignment2.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2.Tests\\Assignment2.Tests.csproj",
         "projectName": "Assignment2.Tests",
-        "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2.Tests\\Assignment2.Tests.csproj",
-        "packagesPath": "C:\\Users\\PRIJITHA\\.nuget\\packages\\",
-        "outputPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2.Tests\\obj\\",
+        "projectPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2.Tests\\Assignment2.Tests.csproj",
+        "packagesPath": "C:\\Users\\prijitha.ezhava\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2.Tests\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PRIJITHA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\prijitha.ezhava\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,9 +29,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2\\Assignment2.csproj": {
-                "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2\\Assignment2.csproj"
+              "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2\\Assignment2.csproj": {
+                "projectPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2\\Assignment2.csproj"
               }
             }
           }
@@ -41,6 +45,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -74,21 +79,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2\\Assignment2.csproj": {
+    "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2\\Assignment2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2\\Assignment2.csproj",
+        "projectUniqueName": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2\\Assignment2.csproj",
         "projectName": "Assignment2",
-        "projectPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2\\Assignment2.csproj",
-        "packagesPath": "C:\\Users\\PRIJITHA\\.nuget\\packages\\",
-        "outputPath": "D:\\ACADEMICS\\GATEWAY GROUPS\\PRE JOINING SESSIONS\\TESTING\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2\\obj\\",
+        "projectPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2\\Assignment2.csproj",
+        "packagesPath": "C:\\Users\\prijitha.ezhava\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\TESTING_ASSIGNMENTS\\Assignment2\\Assignment2\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PRIJITHA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\prijitha.ezhava\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -100,6 +108,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -111,6 +120,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -126,7 +136,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -704,20 +704,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PRIJITHA\\.nuget\\packages\\": {}
+    "C:\\Users\\prijitha.ezhava\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PRIJITHA\\source\\repos\\WebAPI\\Passengers.Test\\Passengers.Test.csproj",
+      "projectUniqueName": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\PRACTICALS\\WebAPI\\Passengers.Test\\Passengers.Test.csproj",
       "projectName": "Passengers.Test",
-      "projectPath": "C:\\Users\\PRIJITHA\\source\\repos\\WebAPI\\Passengers.Test\\Passengers.Test.csproj",
-      "packagesPath": "C:\\Users\\PRIJITHA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PRIJITHA\\source\\repos\\WebAPI\\Passengers.Test\\obj\\",
+      "projectPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\PRACTICALS\\WebAPI\\Passengers.Test\\Passengers.Test.csproj",
+      "packagesPath": "C:\\Users\\prijitha.ezhava\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\PRACTICALS\\WebAPI\\Passengers.Test\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\PRIJITHA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\prijitha.ezhava\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -730,8 +730,8 @@
       "frameworks": {
         "net472": {
           "projectReferences": {
-            "C:\\Users\\PRIJITHA\\source\\repos\\WebAPI\\WebAPI\\WebAPI.csproj": {
-              "projectPath": "C:\\Users\\PRIJITHA\\source\\repos\\WebAPI\\WebAPI\\WebAPI.csproj"
+            "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\PRACTICALS\\WebAPI\\WebAPI\\WebAPI.csproj": {
+              "projectPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\PRACTICALS\\WebAPI\\WebAPI\\WebAPI.csproj"
             }
           }
         }

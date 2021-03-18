@@ -5,12 +5,13 @@ namespace Assignment2.Tests
 {
     public class UnitTest1
     {
+      
         //Return a string of lowercase to uppercase TEST PASS.
         [Fact]
         public void ConvertToUpperCaseTestPass()
         {
             //Arrange
-            string inputString = "testpass";
+            string inputString = "tEstPasS";
             //Act
             string result = inputString.ConvertToUpperCase();
             //Assert
@@ -22,7 +23,7 @@ namespace Assignment2.Tests
         public void ConvertToUpperCaseTestFail()
         {
             //Arrange
-            string inputString = "testfail";
+            string inputString = "teStfAil";
             //Act
             string result = inputString.ConvertToUpperCase();
             //Assert
@@ -34,7 +35,7 @@ namespace Assignment2.Tests
         public void ConvertToLowerCaseTestPass()
         {
             //Arrange
-            string inputString = "TESTPASS";
+            string inputString = "TeStpaSS";
             //Act
             string result = inputString.ConvertToLowerCase();
             //Assert
@@ -46,11 +47,11 @@ namespace Assignment2.Tests
         public void ConvertToLowerCaseTestFail()
         {
             //Arrange
-            string inputString = "TESTFAIL";
+            string inputString = "testFAIL";
             //Act
             string result = inputString.ConvertToLowerCase();
             //Assert
-            Assert.NotEqual("TestFail", result);
+            Assert.NotEqual("TestFail", result);    
         }
 
         //Return a string to titlecase TeST PASS.
@@ -58,11 +59,11 @@ namespace Assignment2.Tests
         public void ConvertToTitleCaseTestPass()
         {
             //Arrange
-            string inputString = "test pass";
+            string inputString = "tESt pAss";
             //Act
             string result = inputString.ConvertToTitleCase();
             //Assert
-            Assert.Equal("Test Pass", result);
+            Assert.Equal("Test Pass", result);                                 //UPDATED.............
         }
 
         //Return a string to titlecase TEST FAIL.
@@ -70,11 +71,11 @@ namespace Assignment2.Tests
         public void ConvertToTitleCaseTestFail()
         {
             //Arrange
-            string inputString = "TEST FAIL";
+            string inputString = "tEST fAIL";
             //Act
             string result = inputString.ConvertToTitleCase();
             //Assert
-            Assert.NotEqual("testfaiL", result);
+            Assert.NotEqual("testfaiL", result);                                 //UPDATED.............
         }
 
         //Find if all the characters of a string is in Lower case TEST PASS.
@@ -102,26 +103,26 @@ namespace Assignment2.Tests
 
         //Return a capitalized version of given input string TEST PASS.
         [Fact]
-        public void ConvertFirstLetterToUpperTestPass()
+        public void CapitalizeStringTestPass()
         {
             //Arrange
-            string inputString = "testpass";
+            string inputString = "test pASS";
             //Act
-            string result = inputString.ConvertFirstLetterToUpper();
+            string result = inputString.CapitalizeString();
             //Assert
-            Assert.Equal("Testpass",result);
+            Assert.Equal("Test pass",result);                               //UPDATED.............
         }
 
         //Return a capitalized version of given input string TEST FAIL.
         [Fact]
-        public void ConvertFirstLetterToUpperTestFail()
+        public void CapitalizeStringTestFail()
         {
             //Arrange
             string inputString = "TEST FAIL";
             //Act
-            string result = inputString.ConvertFirstLetterToUpper();
+            string result = inputString.CapitalizeString();
             //Assert
-            Assert.NotEqual("test fail",result);
+            Assert.NotEqual("test fail",result);                              //UPDATED.............      
         }
 
         //Find if all the characters of a string is in upper case TEST PASS.
@@ -237,11 +238,14 @@ namespace Assignment2.Tests
         public void ConvertStringToIntegerTestFail()
         {
             //Arrange
-            string inputString = "R0897";
+            var inputString = "R1234";
+            var expectedResult = 1234;
             //Act
-            int? result = inputString.ConvertStringToInteger();
+            int result = inputString.ConvertStringToInteger();
+            Console.WriteLine(result);
+            
             //Assert
-            Assert.Null(result);
+            Assert.NotEqual(expectedResult, result);                      //UPDATED.............
         }
     }
 }
