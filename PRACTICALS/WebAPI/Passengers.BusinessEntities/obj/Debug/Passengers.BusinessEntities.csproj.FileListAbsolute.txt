@@ -1,6 +1,0 @@
-C:\Users\PRIJITHA\source\repos\WebAPI\Passengers.BusinessEntities\bin\Debug\Passengers.BusinessEntities.dll
-C:\Users\PRIJITHA\source\repos\WebAPI\Passengers.BusinessEntities\bin\Debug\Passengers.BusinessEntities.pdb
-C:\Users\PRIJITHA\source\repos\WebAPI\Passengers.BusinessEntities\obj\Debug\Passengers.BusinessEntities.csprojAssemblyReference.cache
-C:\Users\PRIJITHA\source\repos\WebAPI\Passengers.BusinessEntities\obj\Debug\Passengers.BusinessEntities.csproj.CoreCompileInputs.cache
-C:\Users\PRIJITHA\source\repos\WebAPI\Passengers.BusinessEntities\obj\Debug\Passengers.BusinessEntities.dll
-C:\Users\PRIJITHA\source\repos\WebAPI\Passengers.BusinessEntities\obj\Debug\Passengers.BusinessEntities.pdb

@@ -1,9 +1,0 @@
-C:\Users\PRIJITHA\source\repos\WebAPI\Passengers.Business\bin\Debug\Passengers.Business.dll
-C:\Users\PRIJITHA\source\repos\WebAPI\Passengers.Business\bin\Debug\Passengers.Business.pdb
-C:\Users\PRIJITHA\source\repos\WebAPI\Passengers.Business\bin\Debug\Passengers.BusinessEntities.dll
-C:\Users\PRIJITHA\source\repos\WebAPI\Passengers.Business\bin\Debug\Passengers.BusinessEntities.pdb
-C:\Users\PRIJITHA\source\repos\WebAPI\Passengers.Business\obj\Debug\Passengers.Business.csprojAssemblyReference.cache
-C:\Users\PRIJITHA\source\repos\WebAPI\Passengers.Business\obj\Debug\Passengers.Business.csproj.CoreCompileInputs.cache
-C:\Users\PRIJITHA\source\repos\WebAPI\Passengers.Business\obj\Debug\Passengers.Business.csproj.CopyComplete
-C:\Users\PRIJITHA\source\repos\WebAPI\Passengers.Business\obj\Debug\Passengers.Business.dll
-C:\Users\PRIJITHA\source\repos\WebAPI\Passengers.Business\obj\Debug\Passengers.Business.pdb
