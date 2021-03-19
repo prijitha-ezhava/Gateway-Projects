@@ -1,0 +1,24 @@
+C:\Users\prijitha.ezhava\source\repos\DotnetAssignment\BusinessEntities\bin\Debug\net5.0\BusinessEntities.deps.json
+C:\Users\prijitha.ezhava\source\repos\DotnetAssignment\BusinessEntities\bin\Debug\net5.0\BusinessEntities.dll
+C:\Users\prijitha.ezhava\source\repos\DotnetAssignment\BusinessEntities\bin\Debug\net5.0\ref\BusinessEntities.dll
+C:\Users\prijitha.ezhava\source\repos\DotnetAssignment\BusinessEntities\bin\Debug\net5.0\BusinessEntities.pdb
+C:\Users\prijitha.ezhava\source\repos\DotnetAssignment\BusinessEntities\obj\Debug\net5.0\BusinessEntities.csprojAssemblyReference.cache
+C:\Users\prijitha.ezhava\source\repos\DotnetAssignment\BusinessEntities\obj\Debug\net5.0\BusinessEntities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prijitha.ezhava\source\repos\DotnetAssignment\BusinessEntities\obj\Debug\net5.0\BusinessEntities.AssemblyInfoInputs.cache
+C:\Users\prijitha.ezhava\source\repos\DotnetAssignment\BusinessEntities\obj\Debug\net5.0\BusinessEntities.AssemblyInfo.cs
+C:\Users\prijitha.ezhava\source\repos\DotnetAssignment\BusinessEntities\obj\Debug\net5.0\BusinessEntities.csproj.CoreCompileInputs.cache
+C:\Users\prijitha.ezhava\source\repos\DotnetAssignment\BusinessEntities\obj\Debug\net5.0\BusinessEntities.dll
+C:\Users\prijitha.ezhava\source\repos\DotnetAssignment\BusinessEntities\obj\Debug\net5.0\ref\BusinessEntities.dll
+C:\Users\prijitha.ezhava\source\repos\DotnetAssignment\BusinessEntities\obj\Debug\net5.0\BusinessEntities.pdb
+C:\Users\prijitha.ezhava\Gateway Project\TrainingPracticals\DotNetCore\DotnetAssignment\BusinessEntities\bin\Debug\net5.0\BusinessEntities.deps.json
+C:\Users\prijitha.ezhava\Gateway Project\TrainingPracticals\DotNetCore\DotnetAssignment\BusinessEntities\bin\Debug\net5.0\BusinessEntities.dll
+C:\Users\prijitha.ezhava\Gateway Project\TrainingPracticals\DotNetCore\DotnetAssignment\BusinessEntities\bin\Debug\net5.0\ref\BusinessEntities.dll
+C:\Users\prijitha.ezhava\Gateway Project\TrainingPracticals\DotNetCore\DotnetAssignment\BusinessEntities\bin\Debug\net5.0\BusinessEntities.pdb
+C:\Users\prijitha.ezhava\Gateway Project\TrainingPracticals\DotNetCore\DotnetAssignment\BusinessEntities\obj\Debug\net5.0\BusinessEntities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prijitha.ezhava\Gateway Project\TrainingPracticals\DotNetCore\DotnetAssignment\BusinessEntities\obj\Debug\net5.0\BusinessEntities.AssemblyInfoInputs.cache
+C:\Users\prijitha.ezhava\Gateway Project\TrainingPracticals\DotNetCore\DotnetAssignment\BusinessEntities\obj\Debug\net5.0\BusinessEntities.AssemblyInfo.cs
+C:\Users\prijitha.ezhava\Gateway Project\TrainingPracticals\DotNetCore\DotnetAssignment\BusinessEntities\obj\Debug\net5.0\BusinessEntities.csproj.CoreCompileInputs.cache
+C:\Users\prijitha.ezhava\Gateway Project\TrainingPracticals\DotNetCore\DotnetAssignment\BusinessEntities\obj\Debug\net5.0\BusinessEntities.dll
+C:\Users\prijitha.ezhava\Gateway Project\TrainingPracticals\DotNetCore\DotnetAssignment\BusinessEntities\obj\Debug\net5.0\ref\BusinessEntities.dll
+C:\Users\prijitha.ezhava\Gateway Project\TrainingPracticals\DotNetCore\DotnetAssignment\BusinessEntities\obj\Debug\net5.0\BusinessEntities.pdb
+C:\Users\prijitha.ezhava\Gateway Project\TrainingPracticals\DotNetCore\DotnetAssignment\BusinessEntities\obj\Debug\net5.0\BusinessEntities.csprojAssemblyReference.cache
