@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeCRUD", "EmployeeCRUD\EmployeeCRUD.csproj", "{ED0C27FC-94B8-4E52-BCB1-DDBE17AC5DCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeCRUD", "EmployeeCRUD\EmployeeCRUD.csproj", "{ED0C27FC-94B8-4E52-BCB1-DDBE17AC5DCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{800F8CCA-D514-4C92-8A6F-5EFB28CA25DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{800F8CCA-D514-4C92-8A6F-5EFB28CA25DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessEntities", "BusinessEntities\BusinessEntities.csproj", "{C425D044-3B89-4BCB-89F2-E55B188BA143}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessEntities", "BusinessEntities\BusinessEntities.csproj", "{C425D044-3B89-4BCB-89F2-E55B188BA143}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL", "BAL\BAL.csproj", "{AB21F12C-C4CA-4C1A-80CE-E3FD0080C841}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BAL", "BAL\BAL.csproj", "{AB21F12C-C4CA-4C1A-80CE-E3FD0080C841}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeWEBAPI", "EmployeeWEBAPI\EmployeeWEBAPI.csproj", "{E3346148-4DF9-4BF7-8A8C-187964DEC0CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{AB21F12C-C4CA-4C1A-80CE-E3FD0080C841}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB21F12C-C4CA-4C1A-80CE-E3FD0080C841}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB21F12C-C4CA-4C1A-80CE-E3FD0080C841}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3346148-4DF9-4BF7-8A8C-187964DEC0CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3346148-4DF9-4BF7-8A8C-187964DEC0CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3346148-4DF9-4BF7-8A8C-187964DEC0CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3346148-4DF9-4BF7-8A8C-187964DEC0CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

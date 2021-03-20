@@ -3,7 +3,7 @@ using BusinessEntities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.Extensions.Logging;
 
 namespace EmployeeCRUD.Controllers
 {
@@ -11,10 +11,13 @@ namespace EmployeeCRUD.Controllers
     public class EmployeeController : Controller
     {
         private readonly IEmployeeManager _employeeManager;
+        private readonly ILogger _logger;
 
-        public EmployeeController(IEmployeeManager employeeManager)
+        public EmployeeController(IEmployeeManager employeeManager, ILoggerFactory logger)
         {
             _employeeManager = employeeManager;
+            logger.AddFile("Logs/EmployeeErrorLog.txt");
+            _logger = logger.CreateLogger("MyCategory");
         }
 
         //To View all employees details 
@@ -23,24 +26,41 @@ namespace EmployeeCRUD.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var result = _employeeManager.GetAllemployees();
-            return View(result);
+            try
+            {
+                var result = _employeeManager.GetAllemployees();
+                return View(result);
+            }
+            catch (System.Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                throw;
+            }
+           
         }
 
         // GET: Employee/Details/5
         public IActionResult Details(int? id)
         {
-            if (id == null)
+            try
             {
-                return NotFound();
-            }
-            var employee = _employeeManager.GetEmployee(id);
-            if (employee == null)
-            {
-                return NotFound();
-            }
+                if (id == null)
+                {
+                    return NotFound();
+                }
+                var employee = _employeeManager.GetEmployee(id);
+                if (employee == null)
+                {
+                    return NotFound();
+                }
 
-            return View(employee);
+                return View(employee);
+            }
+            catch (System.Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                throw;
+            } 
         }
 
         //To Add new employee record 
@@ -48,19 +68,35 @@ namespace EmployeeCRUD.Controllers
         [HttpGet]
         public IActionResult AddEmployee()
         {
-            return View();
+            try
+            {
+                return View();
+            }
+            catch (System.Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                throw;
+            } 
         }
 
         //POST: /Employee/AddEmployee
         [HttpPost]
         public IActionResult AddEmployee(EmployeeViewModel employee)
         {
-            if (ModelState.IsValid)
+            try
             {
-                string addEmployee = _employeeManager.AddEmployee(employee);
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    string addEmployee = _employeeManager.AddEmployee(employee);
+                    return RedirectToAction(nameof(Index));
+                }
+                return View(employee);
             }
-            return View(employee);
+            catch (System.Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                throw;
+            }  
         }
 
         //To Update the records of a particular employee 
@@ -68,17 +104,26 @@ namespace EmployeeCRUD.Controllers
         [HttpGet]
         public IActionResult EditEmployee(int? id)
         {
-            if (id == null)
+            try
             {
-                return NotFound();
-            }
+                if (id == null)
+                {
+                    return NotFound();
+                }
 
-            var employee = _employeeManager.GetEmployee(id);
-            if (employee == null)
-            {
-                return NotFound();
+                var employee = _employeeManager.GetEmployee(id);
+                if (employee == null)
+                {
+                    return NotFound();
+                }
+                return View(employee);
             }
-            return View(employee);
+            catch (System.Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                throw;
+            }
+           
         }
 
         //POST: /Employee/EditEmployee/{id}
@@ -106,14 +151,23 @@ namespace EmployeeCRUD.Controllers
         [HttpGet]
         public IActionResult DeleteEmployee(int? id)
         {
-            if (id == null)
-                return NotFound();
+            try
+            {
+                if (id == null)
+                    return NotFound();
 
-            var employee = _employeeManager.GetEmployee(id);
-            if (employee == null)
-                return NotFound();
+                var employee = _employeeManager.GetEmployee(id);
+                if (employee == null)
+                    return NotFound();
 
-            return View(employee);
+                return View(employee);
+            }
+            catch (System.Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                throw;
+            }
+           
 
         }
 
@@ -122,8 +176,17 @@ namespace EmployeeCRUD.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteEmployee(int id)
         {
-            var employee = _employeeManager.DeleteEmployee(id);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                var employee = _employeeManager.DeleteEmployee(id);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (System.Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                throw;
+            }
+           
         }
     }
 }

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\prijitha.ezhava\\Gateway Project\\TrainingPracticals\\DotNetCore\\DotnetAssignment\\BusinessEntities\\BusinessEntities.csproj",
+      "projectUniqueName": "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\BusinessEntities\\BusinessEntities.csproj",
       "projectName": "BusinessEntities",
-      "projectPath": "C:\\Users\\prijitha.ezhava\\Gateway Project\\TrainingPracticals\\DotNetCore\\DotnetAssignment\\BusinessEntities\\BusinessEntities.csproj",
+      "projectPath": "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\BusinessEntities\\BusinessEntities.csproj",
       "packagesPath": "C:\\Users\\prijitha.ezhava\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prijitha.ezhava\\Gateway Project\\TrainingPracticals\\DotNetCore\\DotnetAssignment\\BusinessEntities\\obj\\",
+      "outputPath": "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\BusinessEntities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

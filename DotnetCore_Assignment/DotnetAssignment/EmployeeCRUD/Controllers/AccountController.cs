@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 
 namespace EmployeeCRUD.Controllers
@@ -10,18 +11,25 @@ namespace EmployeeCRUD.Controllers
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly ILogger _logger;
 
-        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, ILoggerFactory logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+
+            //Creating a log file 
+            logger.AddFile("Logs/AccountErrorLog.txt");
+            _logger = logger.CreateLogger("MyCategory");
         }
 
+        //Dashboard
         public IActionResult Index()
         {
             return View();
         }
 
+        //User Registration
         [HttpGet]
         [AllowAnonymous]
         public IActionResult SignUp()
@@ -44,8 +52,6 @@ namespace EmployeeCRUD.Controllers
 
             if (result.Succeeded)
             {
-                // User sign  
-                // sign in   
                 var signInResult = await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
 
                 if (signInResult.Succeeded)
@@ -57,6 +63,8 @@ namespace EmployeeCRUD.Controllers
             return View();
         }
 
+
+        //User Login
         [HttpGet]
         [AllowAnonymous]
         public IActionResult Login()
@@ -80,6 +88,7 @@ namespace EmployeeCRUD.Controllers
             return View(user);
         }
 
+        //User Logout
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();

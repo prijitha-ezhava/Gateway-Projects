@@ -5954,11 +5954,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\prijitha.ezhava\\Gateway Project\\TrainingPracticals\\DotNetCore\\DotnetAssignment\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\prijitha.ezhava\\Gateway Project\\TrainingPracticals\\DotNetCore\\DotnetAssignment\\DAL\\DAL.csproj",
+      "projectPath": "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\prijitha.ezhava\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prijitha.ezhava\\Gateway Project\\TrainingPracticals\\DotNetCore\\DotnetAssignment\\DAL\\obj\\",
+      "outputPath": "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5978,8 +5978,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\prijitha.ezhava\\Gateway Project\\TrainingPracticals\\DotNetCore\\DotnetAssignment\\BusinessEntities\\BusinessEntities.csproj": {
-              "projectPath": "C:\\Users\\prijitha.ezhava\\Gateway Project\\TrainingPracticals\\DotNetCore\\DotnetAssignment\\BusinessEntities\\BusinessEntities.csproj"
+            "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\BusinessEntities\\BusinessEntities.csproj": {
+              "projectPath": "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\BusinessEntities\\BusinessEntities.csproj"
             }
           }
         }

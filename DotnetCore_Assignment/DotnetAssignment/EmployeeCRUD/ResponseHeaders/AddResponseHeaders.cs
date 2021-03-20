@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EmployeeCRUD
+namespace EmployeeCRUD.ResponseHeaders
 {
     public class AddResponseHeaders : ResultFilterAttribute
     {

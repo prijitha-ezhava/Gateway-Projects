@@ -2,6 +2,7 @@ using BAL;
 using BAL.Interface;
 using DAL.Models;
 using DAL.Repository;
+using EmployeeCRUD.ResponseHeaders;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -63,7 +64,11 @@ namespace EmployeeCRUD
             app.UseRouting();
 
             app.UseAuthorization();
+
+            //Response Caching
             app.UseResponseCaching();
+
+            //Custom Middleware
             app.UseMyMiddleware();
 
             app.UseEndpoints(endpoints =>

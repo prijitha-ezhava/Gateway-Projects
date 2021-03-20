@@ -1,4 +1,4 @@
-﻿using EmployeeCRUD;
+﻿using EmployeeCRUD.CustomMiddleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EmployeeCRUD
+namespace EmployeeCRUD.CustomMiddleware
 {
     public class MyResponseTimeMiddleware
     {
@@ -18,9 +18,11 @@ namespace EmployeeCRUD
         public MyResponseTimeMiddleware(RequestDelegate next, ILoggerFactory logFactory)
         {
             _next = next;
+            logFactory.AddFile("Logs/ResponseTimeLogger.txt");
             _logger = logFactory.CreateLogger("ResponseTime");
         }
 
+        //Response Time measurement for each each response
         public async Task Invoke(HttpContext context)
         {
             var watch = new Stopwatch();
