@@ -1,0 +1,60 @@
+<div class="card mb-4" style="margin:2%;">
+    <div class="card-header" style="background-color: #235465;color: white;">
+        <i class="fa fa-list"></i>
+        Company List
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="auto" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th style="width: auto;">#</th>
+                        <th style="width: 40px;">Name</th>
+                        <th style="width: auto;">Email</th>
+                        <th style="width: auto;">Address</th>
+                        <th>Employees</th>
+                        <th style="width: auto;">Active</th>
+                        <th style="width: 10px;">Branches</th>
+                        <!-- <th>Branch Id</th>
+                        <th>Branch Name</th>
+                        <th>Branch Address</th> -->
+                        <th style="width: auto;">Actions</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th style="width: auto;">#</th>
+                        <th style="width: 40px;">Name</th>
+                        <th style="width: auto;">Email</th>
+                        <th style="width: 30px; padding:1%;">Address</th>
+                        <th>Employees</th>
+                        <th style="width: auto;">Active</th>
+                        <th style="width: 20px;">Branches</th>
+                        <!-- <th>Branch Id</th>
+                        <th>Branch Name</th>
+                        <th>Branch Address</th> -->
+                        <th style="width: auto;">Actions</th>
+                </tfoot>
+                <tbody>
+                    <tr *ngFor="let company of companies">
+                        <td>{{company.id}}</td>
+                        <td>{{company.name}}</td>
+                        <td>{{company.email}}</td>
+                        <td>{{company.address}}</td>
+                        <td>{{company.totalEmployee}}</td>
+                        <td>{{company.isCompanyActive}}</td>
+                        <td>{{company.totalBranch}}</td>
+                        <!-- <td>{{company.branchId}}</td>
+                        <td>{{company.branchName}}</td>
+                        <td>{{company.branchAddress}}</td> -->
+                        <td style="width: auto;"> 
+                            <a (click)="editData(company)" class="btnedit"><i class="fa fa-pencil"></i></a> |&nbsp;
+                            <a (click)="deleteData(company)" class="btndelete"><i class="fa fa-trash"></i></a> | &nbsp;
+                            <a (click)="detailData(company)" class="btninfo"><i class="fa fa-info"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

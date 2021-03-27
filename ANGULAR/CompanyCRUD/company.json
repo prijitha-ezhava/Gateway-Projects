@@ -1,0 +1,482 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "email": "gtl@thegatewaycorp.com",
+      "name": "Gateway Group of Companies",
+      "totalEmployee": 10000,
+      "address": "Ahmedabad",
+      "isCompanyActive": true,
+      "totalBranch": 2,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "Corporate House",
+          "branchAddress": "Bodakdev"
+        },
+        {
+          "branchId": 2,
+          "branchName": "Mindspace",
+          "branchAddress": "Gandhinagar"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "email": "waytoweb@gmail.com",
+      "name": "WayToWeb",
+      "totalEmployee": 100,
+      "address": "Panchvati, Ahmedabad",
+      "isCompanyActive": true,
+      "totalBranch": 2,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "WTW1",
+          "branchAddress": "Ahmedabad"
+        },
+        {
+          "branchId": 2,
+          "branchName": "WTW2",
+          "branchAddress": "Pune"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "email": "hyperlink@gmail.com",
+      "name": "HyperLink",
+      "totalEmployee": 120,
+      "address": "Nirma University, Ahmedabad",
+      "isCompanyActive": true,
+      "totalBranch": 3,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "HPL-One",
+          "branchAddress": "Vadodara"
+        },
+        {
+          "branchId": 2,
+          "branchName": "HPL-Two",
+          "branchAddress": "Mumbai"
+        },
+        {
+          "branchId": 3,
+          "branchName": "HPL-Three",
+          "branchAddress": "Anand"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "email": "mykersoltechnologies@gmail.com",
+      "name": "Mykersol Technologies",
+      "totalEmployee": 200,
+      "address": "Baroda",
+      "isCompanyActive": false,
+      "totalBranch": 1,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "Mykersol",
+          "branchAddress": "Baroda"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "email": "silverwingtechnolgies@gmail.com",
+      "name": "Silverwing Technologies",
+      "totalEmployee": 300,
+      "address": "Pakwan, Ahmedabad",
+      "isCompanyActive": true,
+      "totalBranch": 4,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "SW",
+          "branchAddress": "Ahmedabad"
+        },
+        {
+          "branchId": 2,
+          "branchName": "SW-II",
+          "branchAddress": "Delhi"
+        },
+        {
+          "branchId": 3,
+          "branchName": "SW-III",
+          "branchAddress": "Pune"
+        },
+        {
+          "branchId": 4,
+          "branchName": "SW-IV",
+          "branchAddress": "Kolkata"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "email": "yudizsolutions@yudizsolutions.co.in",
+      "name": "Yudiz Solutions Pvt. Ltd.",
+      "totalEmployee": 400,
+      "address": "Prahaladnagar, Ahmedabad",
+      "isCompanyActive": true,
+      "totalBranch": 2,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "YS-1",
+          "branchAddress": "Ahmedabad"
+        },
+        {
+          "branchId": 2,
+          "branchName": "YS-II",
+          "branchAddress": "Pune"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "email": "communicationcrafts@cc.co.in",
+      "name": "Communication Crafts",
+      "totalEmployee": 300,
+      "address": "Panchavati, Ahmedabad",
+      "isCompanyActive": true,
+      "totalBranch": 5,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "CC-I",
+          "branchAddress": "Ahmedabad"
+        },
+        {
+          "branchId": 2,
+          "branchName": "CC-II",
+          "branchAddress": "Bangalore"
+        },
+        {
+          "branchId": 3,
+          "branchName": "CC-III",
+          "branchAddress": "Nagpur"
+        },
+        {
+          "branchId": 4,
+          "branchName": "CC-IV",
+          "branchAddress": "Anand"
+        },
+        {
+          "branchId": 5,
+          "branchName": "CC-V",
+          "branchAddress": "Bhopal"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "email": "surekhasolutions@yudizsolutions.co.in",
+      "name": "Surekha Solutions Pvt. Ltd.",
+      "totalEmployee": 600,
+      "address": "Nirma University, Ahmedabad",
+      "isCompanyActive": false,
+      "totalBranch": 4,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "SSPL-1",
+          "branchAddress": "Trivandrum"
+        },
+        {
+          "branchId": 2,
+          "branchName": "SSPL-II",
+          "branchAddress": "Delhi"
+        },
+        {
+          "branchId": 3,
+          "branchName": "SSPL-III",
+          "branchAddress": "Jaipur"
+        },
+        {
+          "branchId": 2,
+          "branchName": "SSPL-IV",
+          "branchAddress": ""
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "email": "infosis@infosis.co.in",
+      "name": "Infosis",
+      "totalEmployee": 10000,
+      "address": "Bangalore",
+      "isCompanyActive": true,
+      "totalBranch": 2,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "Infosis-I",
+          "branchAddress": "Bangalore"
+        },
+        {
+          "branchId": 2,
+          "branchName": "Infosis-II",
+          "branchAddress": "Pune"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "email": "hcltechnologies@yahoo.com",
+      "name": "HCL Technologies",
+      "totalEmployee": 400,
+      "address": "Noida, Uttar Pradesh",
+      "isCompanyActive": true,
+      "totalBranch": 2,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "HCL-I",
+          "branchAddress": "Noida"
+        },
+        {
+          "branchId": 2,
+          "branchName": "HCL-II",
+          "branchAddress": "Delhi"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "email": "wipro@gmail.co.in",
+      "name": "Larsen & Toubro Infotech Ltd",
+      "totalEmployee": 31437,
+      "address": "Mumbai, Maharashtra",
+      "isCompanyActive": true,
+      "totalBranch": 2,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "Wipro-India",
+          "branchAddress": "Pune"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "email": " info@itservicesindia.com",
+      "name": "IT Services India",
+      "totalEmployee": 45215,
+      "address": "Bodakdev, Ahmedabad",
+      "isCompanyActive": true,
+      "totalBranch": 2,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "IT Services",
+          "branchAddress": "Ahmedabad"
+        },
+        {
+          "branchId": 2,
+          "branchName": "YS-II",
+          "branchAddress": "Pune"
+        }
+      ]
+    },
+    {
+      "id":6,
+      "email": "accelfrontline@accelfrontline.co.in",
+      "name": "Accel Frontline",
+      "totalEmployee": 7540,
+      "address": "Chennai",
+      "isCompanyActive": true,
+      "totalBranch": 4,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "AFL-1",
+          "branchAddress": "Bangalore"
+        },
+        {
+          "branchId": 2,
+          "branchName": "AFL-II",
+          "branchAddress": "Chennai"
+        },
+        {
+          "branchId": 2,
+          "branchName": "AFL-III",
+          "branchAddress": "Kolkata"
+        },
+        {
+          "branchId": 2,
+          "branchName": "AFL-IV",
+          "branchAddress": "Delhi"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "email": "threeiintotech@threeiintotech.co.in",
+      "name": "3i Infotech",
+      "totalEmployee": 5200,
+      "address": "Mumbai",
+      "isCompanyActive": true,
+      "totalBranch": 4,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "3iI-1",
+          "branchAddress": "Bangalore"
+        },
+        {
+          "branchId": 2,
+          "branchName": "3iI-II",
+          "branchAddress": "Mumbai"
+        },
+        {
+          "branchId": 3,
+          "branchName": "3iI-II",
+          "branchAddress": "Noida"
+        },
+        {
+          "branchId": 4,
+          "branchName": "3iI-II",
+          "branchAddress": "Hyderabad"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "email": "yudizsolutions@yudizsolutions.co.in",
+      "name": "Sasken Technologies",
+      "totalEmployee": 45210,
+      "address": "Bangalore",
+      "isCompanyActive": true,
+      "totalBranch": 3,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "ST-I",
+          "branchAddress": "Pune"
+        },
+        {
+          "branchId": 2,
+          "branchName": "ST-II",
+          "branchAddress": "Chennai"
+        },
+        {
+          "branchId": 3,
+          "branchName": "ST-III",
+          "branchAddress": "Bangalore"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "email": "yudizsolutions@yudizsolutions.co.in",
+      "name": "UST Global",
+      "totalEmployee": 856325,
+      "address": "Aliso Viejo, California",
+      "isCompanyActive": true,
+      "totalBranch": 2,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "USTG-1",
+          "branchAddress": "Kochi"
+        },
+        {
+          "branchId": 2,
+          "branchName": "USTG-II",
+          "branchAddress": "Thiruvananthapuram"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "email": "persistentsystems@persistentsystems.co.in",
+      "name": "Persistent Systems",
+      "totalEmployee": 356589,
+      "address": "Goa",
+      "isCompanyActive": true,
+      "totalBranch": 5,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "PS-I",
+          "branchAddress": "Bangalore"
+        },
+        {
+          "branchId": 2,
+          "branchName": "PS-II",
+          "branchAddress": "Hyderabad"
+        },
+        {
+          "branchId": 3,
+          "branchName": "PS-III",
+          "branchAddress": "Nagpur"
+        },
+        {
+          "branchId": 4,
+          "branchName": "PS-IV",
+          "branchAddress": "Goa"
+        },
+        {
+          "branchId": 5,
+          "branchName": "PS-V",
+          "branchAddress": "Pune"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "email": "microsoft@microsoft.com",
+      "name": "Microsoft",
+      "totalEmployee": 8045212,
+      "address": "Hyderabad",
+      "isCompanyActive": true,
+      "totalBranch": 8,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "MS-1",
+          "branchAddress": "Ahmedabad"
+        },
+        {
+          "branchId": 2,
+          "branchName": "MS-II",
+          "branchAddress": "Bangalore"
+        },
+        {
+          "branchId": 3,
+          "branchName": "MS-III",
+          "branchAddress": "Gurgaon"
+        },
+        {
+          "branchId": 4,
+          "branchName": "MS-IV",
+          "branchAddress": "New Delhi"
+        },
+        {
+          "branchId": 5,
+          "branchName": "MS-V",
+          "branchAddress": "Chennai"
+        },
+        {
+          "branchId": 6,
+          "branchName": "MS-VI",
+          "branchAddress": "Kochi"
+        },
+        {
+          "branchId": 7,
+          "branchName": "MS-VII",
+          "branchAddress": "Kolkata"
+        },
+        {
+          "branchId": 8,
+          "branchName": "MS-VIII",
+          "branchAddress": "Mumbai"
+        }
+      ]
+    }
+  ]
+}

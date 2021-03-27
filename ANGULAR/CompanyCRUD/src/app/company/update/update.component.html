@@ -1,0 +1,103 @@
+<div class="container">
+  <div class="jumbotron">
+    <h3><i class="fa fa-plus"></i> Add Company Details</h3>
+    <hr />
+    <!-- Form for updating company data -->
+    <form [formGroup]="editForm" (ngSubmit)="onUpdate()" #formDir="ngForm" novalidate>
+      <input class="form-control" type="hidden" formControlName="id" ng-required="required">
+
+      <!-- Email address -->
+      <div class="form-group row">
+        <label class=" control-label col-md-3">Email Id</label>
+        <div class="col-md-6">
+          <input class="form-control" type="text" formControlName="email" ng-required="required">
+          <div *ngIf="formdata.email.touched && formdata.email.invalid">Email is invalid</div>
+        </div>
+      </div>
+
+      <!-- Company Name -->
+      <div class="form-group row">
+        <label class=" control-label col-md-3">Name</label>
+        <div class="col-md-6">
+          <input class="form-control" type="text" formControlName="name" ng-required="required">
+          <div *ngIf="formdata.name.touched && formdata.name.invalid">Name is invalid</div>
+        </div>
+      </div>
+
+      <!-- Total Employees -->
+      <div class="form-group row">
+        <label class=" control-label col-md-3">Total Employees</label>
+        <div class="col-md-6">
+          <input class="form-control" type="number" formControlName="totalEmployee" ng-required="required">
+          <div *ngIf="formdata.totalEmployee.touched && formdata.totalEmployee.invalid">Total Employee is invalid</div>
+        </div>
+      </div>
+
+      <!-- Company Address -->
+      <div class="form-group row">
+        <label class=" control-label col-md-3">Address</label>
+        <div class="col-md-6">
+          <input class="form-control" type="text" formControlName="address" ng-required="required">
+          <div *ngIf="formdata.address.touched && formdata.address.invalid">Address is invalid</div>
+        </div>
+      </div>
+
+      <!-- Is Company Active -->
+      <div class="form-group" style="margin-left: 26%;">
+        <input type="checkbox" formControlName="isCompanyActive" ng-required="required"> Is Company Active
+        <div *ngIf="formdata.isCompanyActive.touched && formdata.isCompanyActive.invalid">Address is invalid</div>
+      </div>
+
+      <!-- Company Branch Details -->
+      <div class="col-md-6" style="margin-left: -1.5%;">
+        <label>Branch Details</label>
+        <button style="margin-left:29%;" type="button" class="btn btn-primary" (click)="getBranch()"><i
+            class="fa fa-plus"></i> Add Branch</button>
+      </div>
+
+      <div class="form-inline" formArrayName="companyBranch" *ngFor="let item of getControls(); let i = index;">
+        <div [formGroupName]="i">
+          <div class="form-row" style="margin-top: 2%; margin-left: -2%;">
+
+            <!-- Branch ID -->
+            <span class="col-md-3">
+              <div class="col-md-12">
+                <input class="form-control" type="number" placeholder="Enter Branch ID" formControlName="branchId"
+                  ng-required="required">
+              </div>
+            </span>
+
+            <!-- Branch Name -->
+            <span class="col-md-3">
+              <div class="col-md-12">
+                <input class="form-control" placeholder="Enter Branch Name" type="text" formControlName="branchName"
+                  ng-required="required">
+              </div>
+            </span>
+
+            <!-- Branch Address -->
+            <span class="col-md-3">
+              <div class="col-md-12">
+                <input class="form-control" placeholder="Enter Branch Address" type="text"
+                  formControlName="branchAddress" ng-required="required">
+              </div>
+            </span>
+
+            <span class="col-md-3">
+              <div class="col-md-12">
+                <button class="btn btn-danger" (click)="removeBranch(i)"><i class="fa fa-times"></i> Delete</button>
+              </div>
+            </span>
+          </div>
+        </div>
+        <br />
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btnsave">SUBMIT</button>&emsp;
+        <a href="home" class="btncancel">CANCEL</a>
+      </div>
+
+    </form>
+  </div>
+</div>

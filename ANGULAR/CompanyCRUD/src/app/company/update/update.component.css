@@ -1,0 +1,55 @@
+.jumbotron {
+    background-color: #235465;
+    color : white;
+    width : 80%;
+    margin-left : 12%;
+    margin-top: 2%;
+}
+
+.btnsave{
+    background-color:#f4511e;
+    color: white;
+    border: none;
+    border-radius: 4px; 
+    padding: 14px 28px;
+    text-align: center;
+    font-size: 14px;
+    margin: 4px 2px;
+    opacity: 1;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left:35%;
+    margin-top: 4%;
+}
+.btncancel{
+    background-color:#a5be00;
+    color: white;
+    border: none;
+    border-radius: 4px; 
+    padding: 14px 28px;
+    text-align: center;
+    font-size: 14px;
+    margin: 4px 2px;
+    opacity: 1;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h3{
+    text-align:center;
+    margin-top: 0%;
+}
+.card{
+    padding: 1%;
+}
+
+.btnsave:hover {opacity: 0.6}
+.btncancel:hover {opacity: 0.6}
+
+.divmargin{
+    margin-left:27%;
+}
