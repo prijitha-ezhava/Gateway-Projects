@@ -1,10 +1,8 @@
 ﻿using HMS.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity.Core.Objects.DataClasses;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace HMS.DAL.Repository
 {
@@ -28,7 +26,7 @@ namespace HMS.DAL.Repository
                     Database.tbl_Rooms room = new Database.tbl_Rooms();
                     Database.tbl_Bookings booking = new Database.tbl_Bookings();
 
-                    booking.bDate = model.bDate;
+                    booking.bDate = DateTime.Now;
                     booking.bStatus = model.bStatus;
                     booking.rID = (int)model.rID;
 

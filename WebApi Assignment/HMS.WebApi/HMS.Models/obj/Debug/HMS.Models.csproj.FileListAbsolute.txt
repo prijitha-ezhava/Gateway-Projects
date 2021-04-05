@@ -10,3 +10,9 @@ C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi
 C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.csproj.CoreCompileInputs.cache
 C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.dll
 C:\Users\prijitha.ezhava\Documents\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.pdb
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.Models\bin\Debug\HMS.Models.dll
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.Models\bin\Debug\HMS.Models.pdb
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.csprojAssemblyReference.cache
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.csproj.CoreCompileInputs.cache
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.dll
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\WebApi Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.pdb
