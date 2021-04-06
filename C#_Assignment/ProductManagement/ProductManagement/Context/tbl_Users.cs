@@ -11,28 +11,12 @@ namespace ProductManagement.Context
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class tbl_Users
     {
-        [Key]
-        public int User_ID { get; set; }
-
-        [Required(ErrorMessage = "Enter Email Address")]
-        [EmailAddress]
-        [Display(Name = "Email ID")]
-        public string User_Name { get; set; }
-
-        [Required(ErrorMessage = "Enter Password")]
-        [MinLength(8)]
-        [DataType(DataType.Password)]
-        [Display(Name ="Password")]
-        public string User_Password { get; set; }
-
-        [Required(ErrorMessage = "Enter Confirm Password")]
-        [MinLength(8)]
-        [DataType(DataType.Password)]
-        [Display(Name = "Confirm Password")]
-        public string User_ConfirmPassword { get; set; }
+        public int Id { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public string ConfirmPassword { get; set; }
     }
 }

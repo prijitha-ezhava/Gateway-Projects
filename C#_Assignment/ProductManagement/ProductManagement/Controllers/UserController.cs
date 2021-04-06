@@ -16,7 +16,7 @@ namespace ProductManagement.Controllers
         ILog log = log4net.LogManager.GetLogger(typeof(LoginController));
 
         // GET: User
-        db_ProductsEntities1 dbObj = new db_ProductsEntities1();
+        ProductManagementEntities dbObj = new ProductManagementEntities();
         public ActionResult Users()
         {
             //lognet messages

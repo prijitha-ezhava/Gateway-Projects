@@ -15,7 +15,7 @@ namespace ProductManagement.Controllers
         ILog log = log4net.LogManager.GetLogger(typeof(LoginController));
 
         // GET: Login
-        db_ProductsEntities1 dbObj = new db_ProductsEntities1();
+        ProductManagementEntities dbObj = new ProductManagementEntities();
         public ActionResult Login()
         {
             //lognet messages
@@ -34,10 +34,10 @@ namespace ProductManagement.Controllers
 
         public ActionResult IsValidUser(tbl_Users model)
         {
-            var searchUser = dbObj.tbl_Users.Where(x => x.User_Name == model.User_Name).SingleOrDefault();
+            var searchUser = dbObj.tbl_Users.Where(x => x.UserName == model.UserName).SingleOrDefault();
             if(searchUser!=null)
             {
-                Session["Username"] = searchUser.User_Name;
+                Session["Username"] = searchUser.UserName;
                 return View("Dashboard", searchUser);
             }
             else

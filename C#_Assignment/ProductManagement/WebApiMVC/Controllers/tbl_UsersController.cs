@@ -14,7 +14,7 @@ namespace WebApiMVC.Controllers
 {
     public class tbl_UsersController : ApiController
     {
-        private db_ProductsEntities1 db = new db_ProductsEntities1();
+        private ProductManagementEntities db = new ProductManagementEntities();
 
         // GET: api/tbl_Users
         public IQueryable<tbl_Users> Gettbl_Users()
@@ -44,7 +44,7 @@ namespace WebApiMVC.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != tbl_Users.User_ID)
+            if (id != tbl_Users.Id)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace WebApiMVC.Controllers
             db.tbl_Users.Add(tbl_Users);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = tbl_Users.User_ID }, tbl_Users);
+            return CreatedAtRoute("DefaultApi", new { id = tbl_Users.Id }, tbl_Users);
         }
 
         // DELETE: api/tbl_Users/5
@@ -112,7 +112,7 @@ namespace WebApiMVC.Controllers
 
         private bool tbl_UsersExists(int id)
         {
-            return db.tbl_Users.Count(e => e.User_ID == id) > 0;
+            return db.tbl_Users.Count(e => e.Id == id) > 0;
         }
     }
 }

@@ -11,32 +11,19 @@ namespace ProductManagement.Context
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.ComponentModel.DataAnnotations;
     using System.Web;
 
     public partial class tbl_Products
     {
-        [Key]
-        public int Prod_ID { get; set; }
-
-        [DisplayName("Name")]
-        public string Prod_Name { get; set; }
-        [DisplayName("Category")]
-        public string Prod_Category { get; set; }
-        [DisplayName("Price")]
-        public Nullable<double> Prod_Price { get; set; }
-        [DisplayName("Quantity")]
-        public Nullable<int> Prod_Quantity { get; set; }
-        [DisplayName("Short Description")]
-        public string Prod_Short_Des { get; set; }
-        [DisplayName("Long Description")]
-        public string Prod_Long_Des { get; set; }
-        [DisplayName("Small Image")]
-        public string Prod_Small_Image { get; set; }      
-        [DisplayName("Large Image")]
-        public string Prod_Large_Image { get; set; }
-
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Category { get; set; }
+        public double Price { get; set; }
+        public int Quantity { get; set; }
+        public string ShortDesc { get; set; }
+        public string LongDesc { get; set; }
+        public string SmallImg { get; set; }
+        public string LargeImg { get; set; }
         public HttpPostedFileBase ImageFile { get; set; }
     }
 }

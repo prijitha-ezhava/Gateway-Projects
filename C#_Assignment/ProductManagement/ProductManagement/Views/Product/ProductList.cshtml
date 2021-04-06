@@ -48,7 +48,7 @@
     }
 
     .container {
-        margin-left: 10%;
+        margin-left: 12%;
         width: auto;
         /*margin-right : 3%;*/
     }
@@ -97,18 +97,18 @@
                             @foreach (var item in Model)
                             {
                                 <tr>
-                                    <td>@item.Prod_Name</td>
-                                    <td>@item.Prod_Category</td>
-                                    <td>@item.Prod_Price</td>
-                                    <td>@item.Prod_Quantity</td>
-                                    <td>@item.Prod_Short_Des</td>
-                                    <td>@item.Prod_Long_Des</td>
-                                    <td><center><img src="@Url.Content(item.Prod_Small_Image)" width="50" height="50" /></center></td>
-                                    <td><img src="@Url.Content(item.Prod_Large_Image)" width="100" height="100" /></td>
+                                    <td>@item.Name</td>
+                                    <td>@item.Category</td>
+                                    <td>@item.Price</td>
+                                    <td>@item.Quantity</td>
+                                    <td>@item.ShortDesc</td>
+                                    <td>@item.LongDesc</td>
+                                    <td><center><img src="@Url.Content(item.SmallImg)" width="50" height="50" /></center></td>
+                                    <td><img src="@Url.Content(item.LargeImg)" width="100" height="100" /></td>
                                     <td>
-                                        <a href="@Url.Action("Product",new {item.Prod_ID,item.Prod_Name,item.Prod_Category,item.Prod_Price,item.Prod_Quantity,item.Prod_Small_Image,item.Prod_Large_Image,item.Prod_Short_Des,item.Prod_Long_Des})" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</a>
+                                        <a href="@Url.Action("Product",new {item.ID,item.Name,item.Category,item.Price,item.Quantity,item.SmallImg,item.LargeImg,item.ShortDesc,item.LongDesc})" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</a>
 
-                                        <a onclick="Delete(@item.Prod_ID)" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Delete</a>
+                                        <a onclick="Delete(@item.ID)" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Delete</a>
 
                                     </td>
                                 </tr>

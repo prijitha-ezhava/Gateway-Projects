@@ -14,8 +14,9 @@ namespace WebApiMVC.Models
     
     public partial class tbl_Users
     {
-        public int User_ID { get; set; }
-        public string User_Name { get; set; }
-        public string User_Password { get; set; }
+        public int Id { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public string ConfirmPassword { get; set; }
     }
 }

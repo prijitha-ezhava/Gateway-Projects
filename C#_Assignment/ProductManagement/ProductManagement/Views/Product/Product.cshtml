@@ -93,16 +93,16 @@
                 <h4 class="text-center" style="font-size : 20px; font-family : 'Bookman Old Style';">ADD PRODUCT</h4>
                 <hr />
                 <div class="form-group">
-                    @Html.HiddenFor(x => x.Prod_ID)
-                    @Html.LabelFor(x => x.Prod_Name, htmlAttributes: new { @class = "control-label col-md-2 required" })
-                    @Html.ValidationMessageFor(x => x.Prod_Name, "", new { @class = "error" })
-                    @Html.TextBoxFor(x => x.Prod_Name, new { @class = "form-control required" })
+                    @Html.HiddenFor(x => x.ID)
+                    @Html.LabelFor(x => x.Name, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                    @Html.ValidationMessageFor(x => x.Name, "", new { @class = "error" })
+                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control required" })
                 </div>
 
                 <div class="form-group">
-                    @Html.LabelFor(x => x.Prod_Category, htmlAttributes: new { @class = "control-label col-md-2 required" })
-                    @Html.ValidationMessageFor(x => x.Prod_Name, "", new { @class = "error" })
-                    @Html.DropDownList("Prod_Category", new List<SelectListItem>
+                    @Html.LabelFor(x => x.Category, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                    @Html.ValidationMessageFor(x => x.Category, "", new { @class = "error" })
+                    @Html.DropDownList("Category", new List<SelectListItem>
                     {
                         new SelectListItem{Text = "--Select--", Value = "--Select--", Selected = true},
                         new SelectListItem{Text = "Electrical Appliances", Value = "Electrical Appliances"},
@@ -115,15 +115,15 @@
                 </div>
 
                 <div class="form-group">
-                    @Html.LabelFor(x => x.Prod_Price, htmlAttributes: new { @class = "control-label col-md-2 required" })
-                    @Html.ValidationMessageFor(x => x.Prod_Price, "", new { @class = "error" })
-                    @Html.TextBoxFor(x => x.Prod_Price, new { @class = "form-control required" })
+                    @Html.LabelFor(x => x.Price, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                    @Html.ValidationMessageFor(x => x.Price, "", new { @class = "error" })
+                    @Html.TextBoxFor(x => x.Price, new { @class = "form-control required" })
                 </div>
 
                 <div class="form-group">
-                    @Html.LabelFor(x => x.Prod_Quantity, htmlAttributes: new { @class = "control-label col-md-2 required" })
-                    @Html.ValidationMessageFor(x => x.Prod_Quantity, "", new { @class = "error" })
-                    @Html.DropDownList("Prod_Quantity", new List<SelectListItem>
+                    @Html.LabelFor(x => x.Quantity, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                    @Html.ValidationMessageFor(x => x.Quantity, "", new { @class = "error" })
+                    @Html.DropDownList("Quantity", new List<SelectListItem>
                    {
                        new SelectListItem{Text = "--Select--", Value = "--Select--", Selected = true},
                        new SelectListItem{Text = "1", Value = "1"},
@@ -137,26 +137,26 @@
                 </div>
 
                 <div class="form-group">
-                    @Html.LabelFor(x => x.Prod_Short_Des, htmlAttributes: new { @class = "control-label col-md-2 required" })
-                    @Html.ValidationMessageFor(x => x.Prod_Short_Des, "", new { @class = "error" })
-                    @Html.TextAreaFor(x => x.Prod_Short_Des, new { @class = "form-control required", @rows = "2" })
+                    @Html.LabelFor(x => x.ShortDesc, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                    @Html.ValidationMessageFor(x => x.ShortDesc, "", new { @class = "error" })
+                    @Html.TextAreaFor(x => x.ShortDesc, new { @class = "form-control required", @rows = "2" })
                 </div>
 
                 <div class="form-group">
-                    @Html.LabelFor(x => x.Prod_Long_Des, htmlAttributes: new { @class = "control-label col-md-2 required" })
-                    @Html.ValidationMessageFor(x => x.Prod_Long_Des, "", new { @class = "error" })
-                    @Html.TextAreaFor(x => x.Prod_Long_Des, new { @class = "form-control required", @rows = "5" })
+                    @Html.LabelFor(x => x.LongDesc, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                    @Html.ValidationMessageFor(x => x.LongDesc, "", new { @class = "error" })
+                    @Html.TextAreaFor(x => x.LongDesc, new { @class = "form-control required", @rows = "5" })
                 </div>
 
                 <div class="form-group">
-                    @Html.LabelFor(x => x.Prod_Small_Image, htmlAttributes: new { @class = "control-label col-md-2 required" })
-                    @Html.ValidationMessageFor(x => x.Prod_Small_Image, "", new { @class = "error" })
+                    @Html.LabelFor(x => x.SmallImg, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                    @Html.ValidationMessageFor(x => x.SmallImg, "", new { @class = "error" })
                     <input type="file" name="ImageFile" required />
                 </div>
 
                 <div class="form-group">
-                    @Html.LabelFor(x => x.Prod_Large_Image, htmlAttributes: new { @class = "control-label col-md-2" })
-                    @Html.ValidationMessageFor(x => x.Prod_Large_Image, "", new { @class = "error" })
+                    @Html.LabelFor(x => x.LargeImg, htmlAttributes: new { @class = "control-label col-md-2" })
+                    @Html.ValidationMessageFor(x => x.LargeImg, "", new { @class = "error" })
                     <input type="file" name="ImageFile" required />
                 </div>
 

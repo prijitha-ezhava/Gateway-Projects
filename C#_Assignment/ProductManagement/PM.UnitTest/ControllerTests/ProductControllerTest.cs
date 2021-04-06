@@ -19,7 +19,7 @@ namespace PM.UnitTest.ControllerTests
             tbl_ProductsController controller = new tbl_ProductsController(testProducts);
 
             //Act
-            var result = controller.Gettbl_Products(16) as OkNegotiatedContentResult<tbl_Products>;
+            var result = controller.Gettbl_Products(11) as OkNegotiatedContentResult<tbl_Products>;
             
             //Assert
             Assert.IsNotNull(result);
@@ -42,12 +42,12 @@ namespace PM.UnitTest.ControllerTests
         {
             var testProducts = new List<tbl_Products>();
             testProducts.Add(new tbl_Products { 
-                Prod_Name = "Balls",
-                Prod_Category = "Sports", 
-                Prod_Price = 100, 
-                Prod_Quantity= 1, 
-                Prod_Short_Des= "Cricket Ball Short Des1", 
-                Prod_Long_Des = "Cricket Ball Long Des1", 
+                Name = "Balls",
+                Category = "Sports", 
+                Price = 100, 
+                Quantity= 1, 
+                ShortDesc= "Cricket Ball Short Des1", 
+                LongDesc = "Cricket Ball Long Des1", 
                 });
 
             return testProducts;

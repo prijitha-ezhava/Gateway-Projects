@@ -19,7 +19,7 @@ namespace ProductManagement.Controllers
 
         // GET: Product
         IEnumerable<tbl_Products> productList;
-        db_ProductsEntities dbObj = new db_ProductsEntities();
+        ProductManagementEntities dbObj = new ProductManagementEntities();
         public ActionResult Product(tbl_Products tblObj)
         {
             //lognet messages
@@ -45,26 +45,26 @@ namespace ProductManagement.Controllers
             if(ModelState.IsValid)
             { 
                 tbl_Products obj = new tbl_Products();
-                obj.Prod_ID = model.Prod_ID;
-                obj.Prod_Name = model.Prod_Name;
-                obj.Prod_Category = model.Prod_Category;
-                obj.Prod_Price = model.Prod_Price;
-                obj.Prod_Quantity = model.Prod_Quantity;
-                obj.Prod_Short_Des = model.Prod_Short_Des;
-                obj.Prod_Long_Des = model.Prod_Long_Des;
+                obj.ID = model.ID;
+                obj.Name = model.Name;
+                obj.Category = model.Category;
+                obj.Price = model.Price;
+                obj.Quantity = model.Quantity;
+                obj.ShortDesc = model.ShortDesc;
+                obj.LongDesc = model.LongDesc;
 
                 String fileName = Path.GetFileNameWithoutExtension(model.ImageFile.FileName);
                 String fileExtension = Path.GetExtension(model.ImageFile.FileName);
                 fileName = fileName + DateTime.Now.ToString("yymmssfff") + fileExtension;
-                model.Prod_Small_Image = "~/Images/" + fileName;
-                model.Prod_Large_Image = "~/Images/" + fileName;
+                model.SmallImg = "~/Images/" + fileName;
+                model.LargeImg = "~/Images/" + fileName;
                 fileName = Path.Combine(Server.MapPath("~/Images/"), fileName);
                 model.ImageFile.SaveAs(fileName);
 
-                obj.Prod_Small_Image = model.Prod_Small_Image;
-                obj.Prod_Large_Image = model.Prod_Large_Image;
+                obj.SmallImg = model.SmallImg;
+                obj.LargeImg = model.LargeImg;
            
-                if(model.Prod_ID == 0)
+                if(model.ID == 0)
                 {
                     /*dbObj.tbl_Products.Add(obj);
                     dbObj.SaveChanges();*/
@@ -76,7 +76,7 @@ namespace ProductManagement.Controllers
                 else
                 {
                     //dbObj.Entry(obj).State = EntityState.Modified;
-                    HttpResponseMessage response = GlobalVariables.webApiCLient.PutAsJsonAsync("tbl_Products/" + model.Prod_ID, obj).Result;
+                    HttpResponseMessage response = GlobalVariables.webApiCLient.PutAsJsonAsync("tbl_Products/" + model.ID, obj).Result;
                     TempData["successMsg"] = "Record Updated Successfully";
                     dbObj.SaveChanges();
                 }

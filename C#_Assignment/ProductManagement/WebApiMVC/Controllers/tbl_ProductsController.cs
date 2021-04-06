@@ -14,7 +14,7 @@ namespace WebApiMVC.Controllers
 {
     public class tbl_ProductsController : ApiController
     {
-        private db_ProductsEntities2 db = new db_ProductsEntities2();
+        private ProductManagementEntities db = new ProductManagementEntities();
 
         List<tbl_Products> _products = new List<tbl_Products>();
 
@@ -51,7 +51,7 @@ namespace WebApiMVC.Controllers
         {
             
 
-            if (id != tbl_Products.Prod_ID)
+            if (id != tbl_Products.ID)
             {
                 return BadRequest();
             }
@@ -85,7 +85,7 @@ namespace WebApiMVC.Controllers
             db.tbl_Products.Add(tbl_Products);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = tbl_Products.Prod_ID }, tbl_Products);
+            return CreatedAtRoute("DefaultApi", new { id = tbl_Products.ID }, tbl_Products);
         }
 
         // DELETE: api/tbl_Products/5
@@ -115,7 +115,7 @@ namespace WebApiMVC.Controllers
 
         private bool tbl_ProductsExists(int id)
         {
-            return db.tbl_Products.Count(e => e.Prod_ID == id) > 0;
+            return db.tbl_Products.Count(e => e.ID == id) > 0;
         }
     }
 }

@@ -14,14 +14,14 @@ namespace WebApiMVC.Models
     
     public partial class tbl_Products
     {
-        public int Prod_ID { get; set; }
-        public string Prod_Name { get; set; }
-        public string Prod_Category { get; set; }
-        public Nullable<double> Prod_Price { get; set; }
-        public Nullable<int> Prod_Quantity { get; set; }
-        public string Prod_Short_Des { get; set; }
-        public string Prod_Long_Des { get; set; }
-        public string Prod_Small_Image { get; set; }
-        public string Prod_Large_Image { get; set; }
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Category { get; set; }
+        public double Price { get; set; }
+        public int Quantity { get; set; }
+        public string ShortDesc { get; set; }
+        public string LongDesc { get; set; }
+        public string SmallImg { get; set; }
+        public string LargeImg { get; set; }
     }
 }
