@@ -4,6 +4,12 @@
     ViewData["Title"] = "AddEmployee";
 }
 
+<style>
+    .jumbotron {
+        background-color: #235465;
+        color: white;
+    }
+</style>
 
 <div class="container">
     <div class="jumbotron">
@@ -64,11 +70,11 @@
                 <input asp-for="Email" class="form-control" placeholder="Enter Email" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-            <div class="form-group" style="margin-left:55%;">
+            <div class="form-group" style="margin-left:45%;">
                 <input type="submit" value="SUBMIT" class="btn btn-success" style="color:white;" />
             </div>
-            <div class="form-group" style="margin-left:55%;">
-                <a class="btn btn-outline-warning" asp-action="Index"><i class="fa fa-arrow-left"></i> Back to List</a>
+            <div class="form-group" style="margin-left:42%;">
+                <a class="btn btn-primary" asp-action="Index"><i class="fa fa-arrow-left"></i> BACK TO LIST</a>
             </div>
         </form>
     </div>

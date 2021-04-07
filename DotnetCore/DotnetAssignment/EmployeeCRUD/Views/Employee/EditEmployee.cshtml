@@ -4,12 +4,17 @@
     ViewData["Title"] = "EditEmployee";
 }
 
-<h1>EditEmployee</h1>
+<style>
+    .jumbotron {
+        background-color: #235465;
+        color: white;
+    }
+</style>
 
-<h4>EmployeesData</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="container">
+    <div class="jumbotron">
+        <h4 style="text-align:center;">Edit Employee</h4>
+        <hr />
         <form asp-action="EditEmployee">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ID" />
@@ -48,16 +53,17 @@
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="form-group" style="margin-left:45%;">
+                <input type="submit" value="Save" class="btn btn-success" style="color:white;" />
+            </div>
+            <div class="form-group" style="margin-left:42%;">
+                <a class="btn btn-primary" asp-action="Index"><i class="fa fa-arrow-left"></i> BACK TO LIST</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
