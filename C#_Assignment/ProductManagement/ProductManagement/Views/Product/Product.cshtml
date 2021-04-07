@@ -1,0 +1,174 @@
+﻿@model ProductManagement.Context.tbl_Products
+@{
+    ViewBag.Title = "Product";
+    if (@Session["Username"] == null)
+    {
+        Response.Redirect("~/Login/Login");
+    }
+}
+
+
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+
+        .error{
+            color : red;
+        }
+        .sidenav {
+            font-size: 16px;
+            height: 87%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 40px;
+            left: 0;
+            background-color: #2a3843;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+    .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        color:white ;
+        font-size: 20px;
+        display: block;
+        font-style : bold; 
+        background-color: #3b6064 ;
+        border-radius: 8px;
+        margin-top: 8px;
+        margin-right : 5px;
+     }
+
+    .sidenav a:hover {
+        background-color :white ;
+        color: #2a3843 ;
+    }
+
+    .sidenav a::selection {
+        background-color: #2a3843;
+        color: white;
+    }
+
+        .main {
+            margin-top: 10px;
+            padding: 10px 15px;
+        }
+
+        .container {
+            margin-left: 10%;
+            width: auto;
+            margin-right: 3%;
+        }
+
+        .jumbotron {
+            background-color: #235465;
+            color : white;
+            width : 80%;
+            margin-left : 12%;
+        }
+    </style>
+</head>
+
+<body style="background-color : #ced4da ;">
+    @using (Html.BeginForm("AddProduct", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <div class="container">
+
+            @*Navigation bar*@
+
+            <div class="sidenav custom__sidebar">
+                <a href="@Url.Action("Dashboard","Login")"><i class="fa fa-home"></i> Home</a>
+                <a href="@Url.Action("Product","Product")"><i class="fa fa-plus"></i> Add Product</a>
+                <a href="@Url.Action("ProductList","Product")"><i class="fa fa-bars"></i> Product List</a>
+
+
+            </div>
+            @*End*@
+
+            <div class="jumbotron">
+                <h4 class="text-center" style="font-size : 20px; font-family : 'Bookman Old Style';">ADD PRODUCT</h4>
+                <hr />
+                <div class="form-group">
+                    @Html.HiddenFor(x => x.ID)
+                    @Html.LabelFor(x => x.Name, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                    @Html.ValidationMessageFor(x => x.Name, "", new { @class = "error" })
+                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control required" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Category, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                    @Html.ValidationMessageFor(x => x.Category, "", new { @class = "error" })
+                    @Html.DropDownList("Category", new List<SelectListItem>
+                    {
+                        new SelectListItem{Text = "--Select--", Value = "--Select--", Selected = true},
+                        new SelectListItem{Text = "Electrical Appliances", Value = "Electrical Appliances"},
+                        new SelectListItem{Text = "Home Decorators", Value = "Home Decorators"},
+                        new SelectListItem{Text = "Beauty", Value = "Beauty"},
+                        new SelectListItem{Text = "Sports", Value = "Sports"},
+                        new SelectListItem{Text = "Stationery", Value = "Stationery"},
+
+                    }, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Price, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                    @Html.ValidationMessageFor(x => x.Price, "", new { @class = "error" })
+                    @Html.TextBoxFor(x => x.Price, new { @class = "form-control required" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Quantity, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                    @Html.ValidationMessageFor(x => x.Quantity, "", new { @class = "error" })
+                    @Html.DropDownList("Quantity", new List<SelectListItem>
+                   {
+                       new SelectListItem{Text = "--Select--", Value = "--Select--", Selected = true},
+                       new SelectListItem{Text = "1", Value = "1"},
+                       new SelectListItem{Text = "2", Value = "2"},
+                       new SelectListItem{Text = "3", Value = "3"},
+                       new SelectListItem{Text = "4", Value = "4"},
+                       new SelectListItem{Text = "5", Value = "5"},
+
+                   }, new { @class = "form-control" })
+
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(x => x.ShortDesc, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                    @Html.ValidationMessageFor(x => x.ShortDesc, "", new { @class = "error" })
+                    @Html.TextAreaFor(x => x.ShortDesc, new { @class = "form-control required", @rows = "2" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(x => x.LongDesc, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                    @Html.ValidationMessageFor(x => x.LongDesc, "", new { @class = "error" })
+                    @Html.TextAreaFor(x => x.LongDesc, new { @class = "form-control required", @rows = "5" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(x => x.SmallImg, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                    @Html.ValidationMessageFor(x => x.SmallImg, "", new { @class = "error" })
+                    <input type="file" name="ImageFile" required />
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(x => x.LargeImg, htmlAttributes: new { @class = "control-label col-md-2" })
+                    @Html.ValidationMessageFor(x => x.LargeImg, "", new { @class = "error" })
+                    <input type="file" name="ImageFile" required />
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button type="reset" class="btn btn-primary">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    }
+</body>
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval");
+    }
