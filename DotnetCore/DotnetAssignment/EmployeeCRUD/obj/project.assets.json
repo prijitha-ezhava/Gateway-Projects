@@ -7749,11 +7749,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\EmployeeCRUD\\EmployeeCRUD.csproj",
+      "projectUniqueName": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\DotnetCore\\DotnetAssignment\\EmployeeCRUD\\EmployeeCRUD.csproj",
       "projectName": "EmployeeCRUD",
-      "projectPath": "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\EmployeeCRUD\\EmployeeCRUD.csproj",
+      "projectPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\DotnetCore\\DotnetAssignment\\EmployeeCRUD\\EmployeeCRUD.csproj",
       "packagesPath": "C:\\Users\\prijitha.ezhava\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\EmployeeCRUD\\obj\\",
+      "outputPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\DotnetCore\\DotnetAssignment\\EmployeeCRUD\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7773,11 +7773,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\BAL\\BAL.csproj": {
-              "projectPath": "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\BAL\\BAL.csproj"
+            "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\DotnetCore\\DotnetAssignment\\BAL\\BAL.csproj": {
+              "projectPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\DotnetCore\\DotnetAssignment\\BAL\\BAL.csproj"
             },
-            "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\DAL\\DAL.csproj"
+            "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\DotnetCore\\DotnetAssignment\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\DotnetCore\\DotnetAssignment\\DAL\\DAL.csproj"
             }
           }
         }

@@ -4,21 +4,20 @@
     ViewData["Title"] = "AddEmployee";
 }
 
-<h3>Add Employee</h3>
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="container">
+    <div class="jumbotron">
+        <h3 style="text-align:center;">Add Employee</h3>
+        <hr />
         <form asp-action="AddEmployee">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" placeholder="Enter Name"/>
+                <input asp-for="Name" class="form-control" placeholder="Enter Name" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Department" class="control-label"></label>
-                <input asp-for="Department" class="form-control" placeholder="Enter Department"/>
                 @Html.DropDownList("Department", new List<SelectListItem>
                    {
                        new SelectListItem{Text = "--Select--", Value = "--Select--", Selected = true},
@@ -26,23 +25,23 @@
                        new SelectListItem{Text = "Production", Value = "Production"},
                        new SelectListItem{Text = "Development", Value = "Development"},
                        new SelectListItem{Text = "HR", Value = "HR"},
+                       new SelectListItem{Text = "Administration", Value = "Administration"},
                    }, new { @class = "form-control" })
                 <span asp-validation-for="Department" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Salary" class="control-label"></label>
-                <input asp-for="Salary" class="form-control" placeholder="Enter Salary"/>
+                <input asp-for="Salary" class="form-control" placeholder="Enter Salary" />
                 <span asp-validation-for="Salary" class="text-danger"></span>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="IsManager" /> 
+                    <input class="form-check-input" asp-for="IsManager" />
                     @Html.DisplayNameFor(model => model.IsManager)
                 </label>
             </div>
             <div class="form-group">
                 <label asp-for="Manager" class="control-label"></label>
-                <input asp-for="Manager" class="form-control" />
                 @Html.DropDownList("Manager", new List<SelectListItem>
                    {
                        new SelectListItem{Text = "--Select--", Value = "--Select--", Selected = true},
@@ -51,29 +50,31 @@
                        new SelectListItem{Text = "Production Manager", Value = "Production Manager"},
                        new SelectListItem{Text = "Development Manager", Value = "Development Manager"},
                        new SelectListItem{Text = "HR Manager", Value = "HR Manager"},
+                       new SelectListItem{Text = "Asset Manager", Value = "Asset Manager"},
                    }, new { @class = "form-control" })
                 <span asp-validation-for="Manager" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Phone" class="control-label"></label>
-                <input asp-for="Phone" class="form-control" placeholder="Enter Phone"/>
+                <input asp-for="Phone" class="form-control" placeholder="Enter Phone" />
                 <span asp-validation-for="Phone" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" placeholder="Enter Email"/>
+                <input asp-for="Email" class="form-control" placeholder="Enter Email" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-            <div class="form-group" style="margin-left:35%;">
+            <div class="form-group" style="margin-left:55%;">
                 <input type="submit" value="SUBMIT" class="btn btn-success" style="color:white;" />
+            </div>
+            <div class="form-group" style="margin-left:55%;">
+                <a class="btn btn-outline-warning" asp-action="Index"><i class="fa fa-arrow-left"></i> Back to List</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a class="btn btn-outline-warning" asp-action="Index"><i class="fa fa-arrow-left"></i> Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

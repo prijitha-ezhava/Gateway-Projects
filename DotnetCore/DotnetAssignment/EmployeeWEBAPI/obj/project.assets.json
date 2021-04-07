@@ -6078,11 +6078,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\EmployeeWEBAPI\\EmployeeWEBAPI.csproj",
+      "projectUniqueName": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\DotnetCore\\DotnetAssignment\\EmployeeWEBAPI\\EmployeeWEBAPI.csproj",
       "projectName": "EmployeeWEBAPI",
-      "projectPath": "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\EmployeeWEBAPI\\EmployeeWEBAPI.csproj",
+      "projectPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\DotnetCore\\DotnetAssignment\\EmployeeWEBAPI\\EmployeeWEBAPI.csproj",
       "packagesPath": "C:\\Users\\prijitha.ezhava\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\EmployeeWEBAPI\\obj\\",
+      "outputPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\DotnetCore\\DotnetAssignment\\EmployeeWEBAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6102,8 +6102,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\BAL\\BAL.csproj": {
-              "projectPath": "C:\\Users\\prijitha.ezhava\\Documents\\Gateway-Projects\\DotnetCore_Assignment\\DotnetAssignment\\BAL\\BAL.csproj"
+            "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\DotnetCore\\DotnetAssignment\\BAL\\BAL.csproj": {
+              "projectPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\DotnetCore\\DotnetAssignment\\BAL\\BAL.csproj"
             }
           }
         }
