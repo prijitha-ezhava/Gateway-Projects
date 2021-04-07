@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <!--Bootstrap link for Icons-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Vehicle List CSS Links -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.3.2/css/fixedColumns.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
+    <!-- Vehicle List CSS Links -->
+
+    <!--CSS for Footer-->
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            padding: 15px;
+            width: 100%;
+            background-color: #000100;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+
+                <a href="#" class="navbar-brand" style="color:white"><i class="fa fa-cube"></i>  Vehicle Services</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+    <div class="footer">
+        <div class="container body-content">
+            <p>&copy; @DateTime.Now.Year - Designed and Developed by | Prijitha Ezhava</p>
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+    <!-- Vehicle List JS Links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+    <!-- Vehicle List JS Links -->
+    <!-- Initialize Datatable -->
+    <script>
+        $(document).ready(function () {
+            var customers = $('#CustomersIndex').DataTable({
+                fixedHeader: true,
+                scrollCollapse: true,
+                "searching": true,
+                "lengthChange": true,
+                "paging": true,
+                "ordering": true,
+                "info": true,
+            });
+
+            var vehicle = $('#VehiclesIndex').DataTable({
+                fixedHeader: true,
+                scrollCollapse: true,
+                "searching": true,
+                "lengthChange": true,
+                "paging": true,
+                "ordering": true,
+                "info": true,
+            });
+
+            var mechanics = $('#MechanicsIndex').DataTable({
+                fixedHeader: true,
+                scrollCollapse: true,
+                "searching": true,
+                "lengthChange": true,
+                "paging": true,
+                "ordering": true,
+                "info": true,
+            });
+
+            var services = $('#ServicesIndex').DataTable({
+                fixedHeader: true,
+                scrollCollapse: true,
+                "searching": true,
+                "lengthChange": true,
+                "paging": true,
+                "ordering": true,
+                "info": true,
+            });
+        });
+    </script>
+    <!-- Initialize Datatable -->
+</body>
+</html>

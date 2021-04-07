@@ -1,0 +1,6 @@
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Common\bin\Debug\SBS.Common.dll
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Common\bin\Debug\SBS.Common.pdb
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Common\obj\Debug\SBS.Common.csprojAssemblyReference.cache
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Common\obj\Debug\SBS.Common.csproj.CoreCompileInputs.cache
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Common\obj\Debug\SBS.Common.dll
+C:\Users\PRIJITHA\source\repos\SBS.User.MVC\SBS.Common\obj\Debug\SBS.Common.pdb

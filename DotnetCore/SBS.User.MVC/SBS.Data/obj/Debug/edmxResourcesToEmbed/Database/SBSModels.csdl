@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_VMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbl_Customers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="State" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="EmailID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tbl_Vehicles" Relationship="Self.FK_tbl_Vehicles_tbl_customers" FromRole="tbl_Customers" ToRole="tbl_Vehicles" />
+  </EntityType>
+  <EntityType Name="tbl_Mechanics">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MecName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MobileNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EmailID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Make" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="serviceID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbl_Service" Relationship="Self.FK_tbl_Service_tbl_Mechanics" FromRole="tbl_Mechanics" ToRole="tbl_Service" />
+  </EntityType>
+  <EntityType Name="tbl_Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="price" Type="Double" Nullable="false" />
+    <Property Name="duration" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="isActive" Type="Boolean" Nullable="false" />
+    <Property Name="mechanicID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbl_Mechanics" Relationship="Self.FK_tbl_Service_tbl_Mechanics" FromRole="tbl_Service" ToRole="tbl_Mechanics" />
+  </EntityType>
+  <EntityType Name="tbl_Vehicles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="licensePlate" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Make" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="registrationDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="chasisNo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="custID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbl_Customers" Relationship="Self.FK_tbl_Vehicles_tbl_customers" FromRole="tbl_Vehicles" ToRole="tbl_Customers" />
+  </EntityType>
+  <Association Name="FK_tbl_Vehicles_tbl_customers">
+    <End Role="tbl_Customers" Type="Self.tbl_Customers" Multiplicity="1" />
+    <End Role="tbl_Vehicles" Type="Self.tbl_Vehicles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Customers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_Vehicles">
+        <PropertyRef Name="custID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Service_tbl_Mechanics">
+    <End Role="tbl_Mechanics" Type="Self.tbl_Mechanics" Multiplicity="1" />
+    <End Role="tbl_Service" Type="Self.tbl_Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Mechanics">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_Service">
+        <PropertyRef Name="mechanicID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_VMSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_Customers" EntityType="Self.tbl_Customers" />
+    <EntitySet Name="tbl_Mechanics" EntityType="Self.tbl_Mechanics" />
+    <EntitySet Name="tbl_Service" EntityType="Self.tbl_Service" />
+    <EntitySet Name="tbl_Vehicles" EntityType="Self.tbl_Vehicles" />
+    <AssociationSet Name="FK_tbl_Vehicles_tbl_customers" Association="Self.FK_tbl_Vehicles_tbl_customers">
+      <End Role="tbl_Customers" EntitySet="tbl_Customers" />
+      <End Role="tbl_Vehicles" EntitySet="tbl_Vehicles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Service_tbl_Mechanics" Association="Self.FK_tbl_Service_tbl_Mechanics">
+      <End Role="tbl_Mechanics" EntitySet="tbl_Mechanics" />
+      <End Role="tbl_Service" EntitySet="tbl_Service" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
