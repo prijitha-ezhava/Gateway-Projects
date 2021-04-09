@@ -2,7 +2,7 @@
   "companies": [
     {
       "id": 1,
-      "email": "gtl@thegatewaycorp.com",
+      "email": "gtl@thegatewaydigital.com",
       "name": "Gateway Group of Companies",
       "totalEmployee": 10000,
       "address": "Ahmedabad",
@@ -283,7 +283,7 @@
       ]
     },
     {
-      "id":6,
+      "id": 6,
       "email": "accelfrontline@accelfrontline.co.in",
       "name": "Accel Frontline",
       "totalEmployee": 7540,
@@ -475,6 +475,22 @@
           "branchId": 8,
           "branchName": "MS-VIII",
           "branchAddress": "Mumbai"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "email": "etech@gmail.com",
+      "name": "Etech Global Services",
+      "totalEmployee": 4100,
+      "address": "Infocity, Gandhinagar",
+      "isCompanyActive": true,
+      "totalBranch": 1,
+      "companyBranch": [
+        {
+          "branchId": 1,
+          "branchName": "Etech-I",
+          "branchAddress": "Gandhinagar"
         }
       ]
     }

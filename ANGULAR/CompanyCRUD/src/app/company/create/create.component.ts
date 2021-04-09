@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CrudService } from './../crud.service';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -13,7 +14,9 @@ import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@ang
 export class CreateComponent implements OnInit {
   form! : FormGroup;
   companyBranch!: FormArray;
-  constructor(private crudService :CrudService,private router:Router,private formBuilder: FormBuilder, private avRoute: ActivatedRoute) { }
+  
+
+  constructor(private crudService :CrudService,private router:Router,private formBuilder: FormBuilder, private avRoute: ActivatedRoute,public toastr: ToastrService) { }
 
   btnvisibility = true;
   ngOnInit(): void {
@@ -54,16 +57,17 @@ export class CreateComponent implements OnInit {
   }
 
   onSubmit() {
-
+    
     console.log('Create fire');
-    debugger;
     this.crudService.create(this.form.value)
       .subscribe(data => {
         this.router.navigate(['home']);
+        this.toastr.success(this.form.controls['name'].value + ' successfully added!');
       },
       error => {
         alert(error);
       });
+     
   }
 
 }

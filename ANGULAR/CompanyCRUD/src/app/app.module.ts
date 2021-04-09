@@ -6,6 +6,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
@@ -19,7 +21,9 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     CompanyModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
     //AngularFontAwesomeModule
   ],
   providers: [CrudService],

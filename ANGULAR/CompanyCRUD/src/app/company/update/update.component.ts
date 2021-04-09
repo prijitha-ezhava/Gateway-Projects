@@ -2,6 +2,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CrudService } from './../crud.service';
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-update',
@@ -13,7 +14,7 @@ export class UpdateComponent implements OnInit {
   editForm!: FormGroup;
   companyBranch!: FormArray;
   
-  constructor(private crudService :CrudService, private formBuilder: FormBuilder,private router :Router,private route :ActivatedRoute) { }
+  constructor(private crudService :CrudService, public toastr: ToastrService,private formBuilder: FormBuilder,private router :Router,private route :ActivatedRoute) { }
   
   ngOnInit(): void {
     let companyID = window.localStorage.getItem("companyId");
@@ -66,6 +67,7 @@ export class UpdateComponent implements OnInit {
     console.log('Update Called!');
    this.crudService.update(this.editForm.value).subscribe(data => {
      this.router.navigate(['home']);
+     this.toastr.success(this.editForm.controls['name'].value + ' successfully updated!');
    },
      error => {
        alert(error);

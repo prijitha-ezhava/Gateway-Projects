@@ -2,6 +2,7 @@ import { CrudService } from './../crud.service';
 import { Company } from './../icompany';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +12,11 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   companies : Company[] = [];
-
-  constructor(public crudService: CrudService, private router : Router) { }
+ 
+  constructor(public crudService: CrudService, private router : Router,  public toastr: ToastrService
+  ) {
+  }
+    
 
   ngOnInit(): void {  
 
@@ -29,6 +33,7 @@ export class HomeComponent implements OnInit {
       this.crudService.getAll().subscribe((data:Company[])=>{
         this.companies=data;
       });
+      this.toastr.success('Successfully deleted!');
     });
   };
 

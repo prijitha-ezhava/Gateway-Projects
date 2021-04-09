@@ -10,8 +10,8 @@ import { DetailsComponent } from './details/details.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-
-
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [HomeComponent, DetailsComponent, CreateComponent, UpdateComponent ],
@@ -19,7 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    // BrowserAnimationsModule,
+    // ToastrModule.forRoot()
   ],
   providers:[CrudService]
 })
