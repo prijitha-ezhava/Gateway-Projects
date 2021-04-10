@@ -4,13 +4,22 @@
     ViewData["Title"] = "Index";
 }
 
+<head>
+    <style>
+        .main{
+            width:100%;
+            margin:2%;
+        }
+    </style>
+</head>
 <h1>Employee List</h1>
 
-<hr/>
+<hr />
 <p>
     <a class="btn btn-outline-primary" asp-action="AddEmployee"><i class="fa fa-plus"></i> Add Employees</a>
 </p>
-<table class="table table-striped" style="margin:2%; width:100%;">
+<link href="~/lib/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+<table id="employeeTable" class="table table-striped" style="margin:0%; width:100%;">
     <thead style="background-color:black; color:white;">
         <tr>
             <th>
@@ -34,39 +43,52 @@
             <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
-            <th>Actions</th>
+            <th style="width:auto;">Actions</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Department)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Salary)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsManager)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Manager)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                <a class="btn btn-primary btn-sm " asp-action="EditEmployee" asp-route-id="@item.ID"><i class="fa fa-pencil"></i> Edit</a>
-                <a class="btn btn-info btn-sm " asp-action="Details" asp-route-id="@item.ID"><i class="fa fa-info"></i> Details</a>
-                <a class="btn btn-danger btn-sm" asp-action="DeleteEmployee" asp-route-id="@item.ID"><i class="fa fa-trash"></i> Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Department)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsManager)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Manager)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td  style="width:auto;">
+                    <a class="btn btn-primary btn-sm " asp-action="EditEmployee" asp-route-id="@item.ID"><i class="fa fa-pencil"></i> </a>
+                    <a class="btn btn-info btn-sm " asp-action="Details" asp-route-id="@item.ID"><i class="fa fa-info"></i> </a>
+                    <a class="btn btn-danger btn-sm" asp-action="DeleteEmployee" asp-route-id="@item.ID"><i class="fa fa-trash"></i> </a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+@section Scripts
+{
+    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/datatables/js/dataTables.bootstrap4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#employeeTable').dataTable({
+        });
+    });
+</script>
+}

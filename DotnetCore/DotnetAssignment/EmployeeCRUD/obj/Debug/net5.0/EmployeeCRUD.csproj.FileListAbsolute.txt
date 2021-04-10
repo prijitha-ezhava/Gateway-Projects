@@ -669,3 +669,4 @@ C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\DotnetCore\DotnetAssignment\Em
 C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\DotnetCore\DotnetAssignment\EmployeeCRUD\obj\Debug\net5.0\EmployeeCRUD.Views.pdb
 C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\DotnetCore\DotnetAssignment\EmployeeCRUD\obj\Debug\net5.0\EmployeeCRUD.csproj.CopyComplete
 C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\DotnetCore\DotnetAssignment\EmployeeCRUD\obj\Debug\net5.0\EmployeeCRUD.genruntimeconfig.cache
+C:\Users\prijitha.ezhava\Desktop\Gateway-Projects\DotnetCore\DotnetAssignment\EmployeeCRUD\bin\Debug\net5.0\libman.json
