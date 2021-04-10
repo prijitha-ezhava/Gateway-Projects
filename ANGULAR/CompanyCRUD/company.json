@@ -247,17 +247,17 @@
     },
     {
       "id": 8,
-      "email": "wipro@gmail.co.in",
+      "email": "larsen&tourbo@gmail.co.in",
       "name": "Larsen & Toubro Infotech Ltd",
-      "totalEmployee": 31437,
+      "totalEmployee": 451236,
       "address": "Mumbai, Maharashtra",
       "isCompanyActive": true,
       "totalBranch": 2,
       "companyBranch": [
         {
           "branchId": 1,
-          "branchName": "Wipro-India",
-          "branchAddress": "Pune"
+          "branchName": "L&T-India",
+          "branchAddress": "Mumbai"
         }
       ]
     },
