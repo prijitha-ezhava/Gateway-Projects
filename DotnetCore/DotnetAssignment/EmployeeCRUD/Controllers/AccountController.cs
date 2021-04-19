@@ -37,6 +37,8 @@ namespace EmployeeCRUD.Controllers
             return View();
         }
 
+
+        //User Registration
         [HttpPost]
         [AllowAnonymous]
         public async Task<IActionResult> SignUpAsync(LoginViewModel model)

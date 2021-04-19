@@ -6,9 +6,9 @@
 
 <head>
     <style>
-        .main{
-            width:100%;
-            margin:2%;
+        .main {
+            width: 100%;
+            margin: 2%;
         }
     </style>
 </head>
@@ -71,7 +71,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Email)
                 </td>
-                <td  style="width:auto;">
+                <td style="width:auto;">
                     <a class="btn btn-primary btn-sm " asp-action="EditEmployee" asp-route-id="@item.ID"><i class="fa fa-pencil"></i> </a>
                     <a class="btn btn-info btn-sm " asp-action="Details" asp-route-id="@item.ID"><i class="fa fa-info"></i> </a>
                     <a class="btn btn-danger btn-sm" asp-action="DeleteEmployee" asp-route-id="@item.ID"><i class="fa fa-trash"></i> </a>
@@ -81,14 +81,16 @@
     </tbody>
 </table>
 
+
+@*--------------DataTables--------------*@
 @section Scripts
 {
     <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
     <script src="~/lib/datatables/js/dataTables.bootstrap4.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#employeeTable').dataTable({
+    <script>
+        $(document).ready(function () {
+            $('#employeeTable').dataTable({
+            });
         });
-    });
-</script>
+    </script>
 }

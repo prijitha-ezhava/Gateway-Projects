@@ -19,12 +19,16 @@ namespace EmployeeWEBAPI.Controllers
             _employeeManager = employeeManager;
         }
 
+
+        //GET all Employee list
         [HttpGet]
         public ActionResult Index()
         {
             return StatusCode(200, _employeeManager.GetAllemployees().ToList());
         }
 
+
+        //GET Employee by particular ID
         [HttpGet]
         [Route("GetEmployee/{id}")]
         public ActionResult GetEmployee(int? id)
@@ -32,6 +36,8 @@ namespace EmployeeWEBAPI.Controllers
             return StatusCode(200, _employeeManager.GetEmployee(id));
         }
 
+
+        //ADD New Employee
         [HttpPost]
         [Route("AddEmployee")]
         public ActionResult AddEmployee(EmployeeViewModel employee)
@@ -39,6 +45,8 @@ namespace EmployeeWEBAPI.Controllers
             return StatusCode(200, _employeeManager.AddEmployee(employee));
         }
 
+
+        //Update Employee Data
         [HttpPut]
         [Route("EditEmployee")]
         public ActionResult EditEmployee(int? id, EmployeeViewModel employee)
@@ -46,6 +54,8 @@ namespace EmployeeWEBAPI.Controllers
             return StatusCode(200, _employeeManager.UpdateEmployee(employee));
         }
 
+
+        //Delete any particular Employee by id
         [HttpDelete]
         [Route("DeleteEmployee")]
         public ActionResult DeleteEmployee(int id)

@@ -39,6 +39,8 @@ namespace EmployeeCRUD.Controllers
            
         }
 
+
+        //To view data of any particular employee in detail
         // GET: Employee/Details/5
         public IActionResult Details(int? id)
         {
@@ -126,6 +128,8 @@ namespace EmployeeCRUD.Controllers
            
         }
 
+
+        //To update any particular employee data by id
         //POST: /Employee/EditEmployee/{id}
         [HttpPost]
         [ValidateAntiForgeryToken]
