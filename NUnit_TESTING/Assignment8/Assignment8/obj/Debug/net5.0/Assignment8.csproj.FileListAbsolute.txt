@@ -1,0 +1,16 @@
+C:\Users\prijitha.ezhava\source\repos\Assignment8\Assignment8\bin\Debug\net5.0\Assignment8.exe
+C:\Users\prijitha.ezhava\source\repos\Assignment8\Assignment8\bin\Debug\net5.0\Assignment8.deps.json
+C:\Users\prijitha.ezhava\source\repos\Assignment8\Assignment8\bin\Debug\net5.0\Assignment8.runtimeconfig.json
+C:\Users\prijitha.ezhava\source\repos\Assignment8\Assignment8\bin\Debug\net5.0\Assignment8.runtimeconfig.dev.json
+C:\Users\prijitha.ezhava\source\repos\Assignment8\Assignment8\bin\Debug\net5.0\Assignment8.dll
+C:\Users\prijitha.ezhava\source\repos\Assignment8\Assignment8\bin\Debug\net5.0\ref\Assignment8.dll
+C:\Users\prijitha.ezhava\source\repos\Assignment8\Assignment8\bin\Debug\net5.0\Assignment8.pdb
+C:\Users\prijitha.ezhava\source\repos\Assignment8\Assignment8\obj\Debug\net5.0\Assignment8.csprojAssemblyReference.cache
+C:\Users\prijitha.ezhava\source\repos\Assignment8\Assignment8\obj\Debug\net5.0\Assignment8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prijitha.ezhava\source\repos\Assignment8\Assignment8\obj\Debug\net5.0\Assignment8.AssemblyInfoInputs.cache
+C:\Users\prijitha.ezhava\source\repos\Assignment8\Assignment8\obj\Debug\net5.0\Assignment8.AssemblyInfo.cs
+C:\Users\prijitha.ezhava\source\repos\Assignment8\Assignment8\obj\Debug\net5.0\Assignment8.csproj.CoreCompileInputs.cache
+C:\Users\prijitha.ezhava\source\repos\Assignment8\Assignment8\obj\Debug\net5.0\Assignment8.dll
+C:\Users\prijitha.ezhava\source\repos\Assignment8\Assignment8\obj\Debug\net5.0\ref\Assignment8.dll
+C:\Users\prijitha.ezhava\source\repos\Assignment8\Assignment8\obj\Debug\net5.0\Assignment8.pdb
+C:\Users\prijitha.ezhava\source\repos\Assignment8\Assignment8\obj\Debug\net5.0\Assignment8.genruntimeconfig.cache
