@@ -70,7 +70,8 @@ namespace TestProject
             Assert.That(result, Has
                 .Count.EqualTo(5)
                 .And.Exactly(1).Property("Name").EqualTo("Prijitha Ezhava")
-                .And.Exactly(2).Property("Address").EqualTo("Ahmedabad"));
+                .And.Exactly(2
+                ).Property("Address").EqualTo("Ahmedabad"));
         }
 
         [Test]
@@ -142,6 +143,18 @@ namespace TestProject
             }
         }
 
+        //-------------------------------------------------------------------------------------------------------------------------------
+        //----------------------------------------------- RemoveLastCharacterConstraint -------------------------------------------------
+        //-------------------------------------------------------------------------------------------------------------------------------
 
+        [Test]
+        public void RemoveLastCharacterConstraintTest()
+        {
+            //Act
+            string value = "Prijitha";
+
+            //Assert
+            Assert.That("Prijith", Is.RemoveLastCharacter(value));
+        }
     }
 }
