@@ -1,0 +1,16 @@
+C:\Users\prijitha.ezhava\source\repos\Assignment9\Assignment9\bin\Debug\net5.0\Assignment9.exe
+C:\Users\prijitha.ezhava\source\repos\Assignment9\Assignment9\bin\Debug\net5.0\Assignment9.deps.json
+C:\Users\prijitha.ezhava\source\repos\Assignment9\Assignment9\bin\Debug\net5.0\Assignment9.runtimeconfig.json
+C:\Users\prijitha.ezhava\source\repos\Assignment9\Assignment9\bin\Debug\net5.0\Assignment9.runtimeconfig.dev.json
+C:\Users\prijitha.ezhava\source\repos\Assignment9\Assignment9\bin\Debug\net5.0\Assignment9.dll
+C:\Users\prijitha.ezhava\source\repos\Assignment9\Assignment9\bin\Debug\net5.0\ref\Assignment9.dll
+C:\Users\prijitha.ezhava\source\repos\Assignment9\Assignment9\bin\Debug\net5.0\Assignment9.pdb
+C:\Users\prijitha.ezhava\source\repos\Assignment9\Assignment9\obj\Debug\net5.0\Assignment9.csprojAssemblyReference.cache
+C:\Users\prijitha.ezhava\source\repos\Assignment9\Assignment9\obj\Debug\net5.0\Assignment9.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prijitha.ezhava\source\repos\Assignment9\Assignment9\obj\Debug\net5.0\Assignment9.AssemblyInfoInputs.cache
+C:\Users\prijitha.ezhava\source\repos\Assignment9\Assignment9\obj\Debug\net5.0\Assignment9.AssemblyInfo.cs
+C:\Users\prijitha.ezhava\source\repos\Assignment9\Assignment9\obj\Debug\net5.0\Assignment9.csproj.CoreCompileInputs.cache
+C:\Users\prijitha.ezhava\source\repos\Assignment9\Assignment9\obj\Debug\net5.0\Assignment9.dll
+C:\Users\prijitha.ezhava\source\repos\Assignment9\Assignment9\obj\Debug\net5.0\ref\Assignment9.dll
+C:\Users\prijitha.ezhava\source\repos\Assignment9\Assignment9\obj\Debug\net5.0\Assignment9.pdb
+C:\Users\prijitha.ezhava\source\repos\Assignment9\Assignment9\obj\Debug\net5.0\Assignment9.genruntimeconfig.cache
