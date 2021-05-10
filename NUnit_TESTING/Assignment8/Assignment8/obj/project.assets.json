@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\prijitha.ezhava\\source\\repos\\Assignment8\\Assignment8\\Assignment8.csproj",
+      "projectUniqueName": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\NUnit_TESTING\\Assignment8\\Assignment8\\Assignment8.csproj",
       "projectName": "Assignment8",
-      "projectPath": "C:\\Users\\prijitha.ezhava\\source\\repos\\Assignment8\\Assignment8\\Assignment8.csproj",
+      "projectPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\NUnit_TESTING\\Assignment8\\Assignment8\\Assignment8.csproj",
       "packagesPath": "C:\\Users\\prijitha.ezhava\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prijitha.ezhava\\source\\repos\\Assignment8\\Assignment8\\obj\\",
+      "outputPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\NUnit_TESTING\\Assignment8\\Assignment8\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

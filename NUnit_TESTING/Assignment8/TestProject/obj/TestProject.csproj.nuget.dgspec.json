@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\prijitha.ezhava\\source\\repos\\Assignment8\\TestProject\\TestProject.csproj": {}
+    "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\NUnit_TESTING\\Assignment8\\TestProject\\TestProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\prijitha.ezhava\\source\\repos\\Assignment8\\Assignment8\\Assignment8.csproj": {
+    "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\NUnit_TESTING\\Assignment8\\Assignment8\\Assignment8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prijitha.ezhava\\source\\repos\\Assignment8\\Assignment8\\Assignment8.csproj",
+        "projectUniqueName": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\NUnit_TESTING\\Assignment8\\Assignment8\\Assignment8.csproj",
         "projectName": "Assignment8",
-        "projectPath": "C:\\Users\\prijitha.ezhava\\source\\repos\\Assignment8\\Assignment8\\Assignment8.csproj",
+        "projectPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\NUnit_TESTING\\Assignment8\\Assignment8\\Assignment8.csproj",
         "packagesPath": "C:\\Users\\prijitha.ezhava\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prijitha.ezhava\\source\\repos\\Assignment8\\Assignment8\\obj\\",
+        "outputPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\NUnit_TESTING\\Assignment8\\Assignment8\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -61,14 +61,14 @@
         }
       }
     },
-    "C:\\Users\\prijitha.ezhava\\source\\repos\\Assignment8\\TestProject\\TestProject.csproj": {
+    "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\NUnit_TESTING\\Assignment8\\TestProject\\TestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prijitha.ezhava\\source\\repos\\Assignment8\\TestProject\\TestProject.csproj",
+        "projectUniqueName": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\NUnit_TESTING\\Assignment8\\TestProject\\TestProject.csproj",
         "projectName": "TestProject",
-        "projectPath": "C:\\Users\\prijitha.ezhava\\source\\repos\\Assignment8\\TestProject\\TestProject.csproj",
+        "projectPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\NUnit_TESTING\\Assignment8\\TestProject\\TestProject.csproj",
         "packagesPath": "C:\\Users\\prijitha.ezhava\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prijitha.ezhava\\source\\repos\\Assignment8\\TestProject\\obj\\",
+        "outputPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\NUnit_TESTING\\Assignment8\\TestProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -88,8 +88,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\prijitha.ezhava\\source\\repos\\Assignment8\\Assignment8\\Assignment8.csproj": {
-                "projectPath": "C:\\Users\\prijitha.ezhava\\source\\repos\\Assignment8\\Assignment8\\Assignment8.csproj"
+              "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\NUnit_TESTING\\Assignment8\\Assignment8\\Assignment8.csproj": {
+                "projectPath": "C:\\Users\\prijitha.ezhava\\Desktop\\Gateway-Projects\\NUnit_TESTING\\Assignment8\\Assignment8\\Assignment8.csproj"
               }
             }
           }
